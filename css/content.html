@@ -4,26 +4,348 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Css Syllabus</title>
+    <style>
+  body::after {
+    content: "MonishaMaruthaiyan";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    
+    /* Styling variables */
+    font-family: sans-serif;
+    font-size: 5rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.08); 
+    white-space: nowrap;
+    
+    z-index: 9999;
+    pointer-events: none; 
+  }
+</style>
 </head>
 <body>
-    <a href="Day1.html">Day 1</a>
-    <ol>
-        <li>CSS Introduction</li>
-        <li>CSS Syntax: selector {
-                property: value;
-            }       
-        </li>
-        <li>Types of CSS</li>
-        <li>Element Selector</li>
-        <li>Class Selector</li>
-        <li>ID Selector</li>
-        <li>Color - background,color,border</li>
-        <li>background - color,image,repeat,position,attachment</li>
-        <li>text - color,text-align, text-decoration,text-transform,spacing,shadow</li>
-        <li>font - family,size,style(normal,italic), weight,variant</li>
+    <center><h2>CSS Content Page </h2></center><hr>
+    <div>
+        <section>
+            <a href="day1.html" target="_blank">Day 1</a><br>
+            <a href="textformatting.html" target="_blank">Day 2 - Css -Basic (part 2) </a><br>
+            <ol>
+                <li>CSS Introduction</li>
+                <li>CSS Syntax: selector {
+                        property: value;
+                    }       
+                </li>
+                <li>Types of CSS</li>
+                <li>Element Selector</li>
+                <li>Class Selector</li>
+                <li>ID Selector</li>
+                <li>Color - background,color,border</li>
+                <li>Introduction - background - color,image,repeat,position,attachment</li>
+                <li>Introduction - text - color,text-align, text-decoration,text-transform,spacing,shadow</li>
+                <li>Introduction - font - family,size,style(normal,italic), weight,variant</li>
+            </ol>
+        </section>
+        <section>
 
-<p style="border-top:2px solid blue">thidhgfghfhg</p>
-        
-    </ol>
+        </section>
+            
+
+    </div>
+    <div>
+        <a href="day2.html" target="_blank">Day 2</a>
+        <div>
+            <h3 style="color:brown;">Selector Categories</h3>
+            <p>Find / select the HTML Element you want to Style</p>
+        </div>
+        <ul>
+            <li><dl>
+            <dt>Simple Selector</dt>
+            <dd>Based on name,id,class</dd>
+            <dd><ol>
+                <li><dl>
+                    <dt>Element Selector</dt>
+                    <dd style="color:blue;">eg: p{text-align:center;}</dd>
+                </dl> </li>
+                <li><dl>
+                    <dt>id Selector</dt>
+                    <dd style="color:blue;">eg: #id1{text-align:center;}</dd>
+                </dl> </li> 
+                <li><dl>
+                    <dt>class Selector</dt>
+                    <dd style="color:blue;">eg-1: .classname{text-align:center;} eg-2: p.classname{color:red;}</dd>
+                </dl></li>
+                <li><dl>
+                    <dt>grouping Selector</dt>
+                    <dd style="color:blue;"><pre>
+                            eg : h1,h2,p{
+                                text-align:center;
+                            }
+                            note:
+                                1.group the selector to minimize the code
+                                2.Seperate each Selector with a comma
+                    </pre>/dd>
+                </dl></li>
+            </ol></dd>
+        </dl></li>
+
+            <li><dl>
+            <dt>Combinator Selector</dt>
+            <dd>Specific Relationship Between them</dd>
+            <dd>4 Types
+                <ul style="list-style-type:disc;">
+                    <li>descendant Combinator(space)</li>
+                    <li>child (>)</li>
+                    <li>Next Sibling (+)</li>
+                    <li>Subsequent -Sibling (~)</li>
+                </ul>
+                <br>
+                <ol><li>
+                    <dl>
+                        <dt>Descendant Combinator </dt>
+                        <dd style="color:blue;"><pre>
+                            div p {
+                                background-color:yellow;
+                            }
+
+                            notes:
+                                1. Matches all elements that are descentants of a specified Element
+                                2. All &lt;p&gt; element inside &lt;div&gt;
+                        </pre></dd>
+                    </dl>
+                </li></ol>
+
+                <ol><li>
+                    <dl>
+                        <dt>Child Combinator</dt>
+                        <dd style="color:blue;"><pre>
+                            div > p {
+                                background-color:yellow;
+                            }
+
+                            notes:
+                                1. Matches all elements that are Children of a specified Element
+                                (direct children - div -section-p => not allowed , div -p => allowed)
+                        </pre></dd>
+                    </dl>
+                </li></ol>
+
+                <ol><li>
+                    <dl>
+                        <dt>Next Sibling Combinator</dt>
+                        <dd style="color:blue;"><pre>
+                            div +  p {
+                                background-color:yellow;
+                            }
+
+                            notes:
+                                1. first p element that are placed immediately after &lt;div&gt;
+                                (div next vara sudden p tag. not inside not after the first one)
+                        </pre></dd>
+                    </dl>
+                </li></ol>
+
+                <ol><li>
+                    <dl>
+                        <dt>Subsequent -sibling Combinator</dt>
+                        <dd style="color:blue;"><pre>
+                            div ~ p {
+                                background-color:yellow;
+                            }
+
+                            notes:
+                                1. Select all elements that are next Sibling of a specified Element
+                        </pre></dd>
+                    </dl>
+                </li></ol>
+            </dd>
+        </dl></li>
+
+            <li><dl>
+            <dt>pseudo-class Selector</dt>
+            <dd>Certain State</dd>
+            <dd style="color:blue;">
+                <pre>
+                    notes: Used to define Special State of an Element
+                    eg:
+                        1. Mouse Over
+                        2. Visited ,unvisited Links
+                        3. get Focus
+                        4. valid / invalid /required/optional form elements
+
+                        Syntax: Selector : psuedo-class {
+                            property:value;
+                        }
+
+                        eg: 
+                            a:link { color:blue;}
+                            a:visited { color:violet;}
+                            a:hover { color:pink;}
+                            a:active { color:green;}
+                        NOTE:
+                        1. hover come after link and visited
+                        2. active come after hover
+
+                            a.highlight:hover{color:blue;} => on class
+                            div:hover{background:green;} => on div
+                            p:first-child{color:blue;} =>  p on first-child for any tag
+                            p i: first-child
+                </pre>
+            </dd>
+        </dl></li>
+
+            <li><dl>
+            <dt>pseudo-Element Selector</dt>
+            <dd>part of an Element</dd>
+                <dd style="color:blue;">
+                    <pre>
+                        Style Specific parts of an Element
+                        first letter or line of an Element
+                            <ol>
+                                <li>Insert content before or after element</li>
+                                <li>Style the marks of list item</li>
+                                <li>viewbox behind a dialog box</li>
+                            </ol>
+                            Syntax:
+                                selector :: pseudo-Element{property:value;}
+
+                                Only can apply to block level Element &lt;p&gt;
+                                note: font-color,background,text-decoration,
+                                word spacing , letter spacing,vertical-align,
+                                text transform,line-height...
+                            Example:
+                                p::first-letter{font-size:xx-large;}
+                                p::first-line{font-size:xx-large;}
+
+                    </pre>
+                </dd>
+        </dl></li>
+
+            <li><dl>
+            <dt>Attribute Selector</dt>
+            <dd>Attribute / attribute value </dd>
+            <dd style="color:blue;">
+                <pre>Specific attribute/attribute value</pre>
+                <ol>
+                    <li><dl><dt>css[attribute] Selector</dt>
+                        <dd>a[target]{background-color:yellow;}</dd></dl></li>
+                    <li><dl><dt>css[attribute="value"] Selector</dt>
+                        <dd>a[target="_blank"]{background-color:yellow;}</dd></dl></li>
+                    <li><dl> apply for title with flower
+                        <dt>css[attribute~="value"] Selector</dt>
+                        <dd>a[title~="flower"]{background-color:yellow;}</dd></dl></li>
+                    
+                    <li><dl>exact value or follwed by(_)
+                        <dt>css[attribute|="value"] Selector</dt>
+                        <dd>[class|="top"]{}</dd></dl></li>
+
+                    <li><dl>exact value or follwed by(_)
+                        <dt>css[attribute^="value"] Selector</dt>
+                        <dd>[class^="top"]{}</dd></dl></li>
+
+                    <li><dl>change only it found that letter (eg: allow top not top1)
+                        <dt>css[attribute$="value"] Selector</dt>
+                        <dd>[class$="top"]{}</dd></dl></li>
+
+                    <li><dl>Letter match  eg: allow test,protein not check
+                        <dt>css[attribute*="value"] Selector</dt>
+                        <dd>[class*="te"]{}</dd></dl></li>
+
+                    <li><dl>Styling Format -without class / ID
+                        <dt>css[attribute*="value"] Selector</dt>
+                        <dd>input[ type="text"]{color:green}</dd></dl></li>
+                        
+                </ol>
+                    
+
+            </dd>
+        </dl></li>
+        </ul>
+
+    </div>
+    <div>
+        <section>
+            <a href="day3.html">day3</a>
+
+        </section>
+        <section>
+                1. Box Model
+                2. Position
+                    1. static
+                    2. fixed
+                    3. relative
+                    4. absolute
+                    5. Sticky
+
+                3.  Unit 
+                    1. absolute (px) Stays exactly the same size on every device
+                    2. relative  (%, em, rem): Changes size dynamically 
+                        % (Parent container size) => Column widths, layout grids, hero section heights
+                        rem (Root EM) 1rem = 16px => Headings, paragraph text, structural spacing
+                        em (Element EM) => Parent/Current element text size
+
+
+        </section>
+    </div>
+<hr>
+  <footer>
+    <p>Created by Monisha Maruthaiyan - @2026 </p>
+  </footer>  
+<script>
+    (function() {
+        // Runs immediately when the DOM is ready
+        window.addEventListener('DOMContentLoaded', () => {
+            
+            // Your name hidden as character codes to bypass text "Find & Replace" search
+            const signatureCodes = [77, 111, 110, 105, 115, 104, 97, 77, 97, 114, 117, 116, 104, 97, 105, 121, 97, 110];
+            const originalAuthor = String.fromCharCode(...signatureCodes);
+            
+            // Generate the secure floating layer
+            const watermarkEl = document.createElement('div');
+            watermarkEl.id = '_secure_tracker_';
+            watermarkEl.style.cssText = `
+                position: fixed !important;
+                bottom: 15px !important;
+                right: 15px !important;
+                font-family: 'Courier New', monospace !important;
+                font-size: 13px !important;
+                font-weight: bold !important;
+                color: rgba(0, 0, 0, 0.25) !important;
+                background: rgba(255, 255, 255, 0.7) !important;
+                padding: 6px 12px !important;
+                border: 1px solid rgba(0, 0, 0, 0.1) !important;
+                border-radius: 4px !important;
+                z-index: 2147483647 !important; /* Forces it above all elements */
+                pointer-events: none !important; /* Text selectable underneath */
+                user-select: none !important;
+            `;
+            watermarkEl.innerText = "Source: " + originalAuthor;
+            document.body.appendChild(watermarkEl);
+
+            // MUTATION GUARDIAN: Detects if students try to delete or alter the element
+            const guardianObserver = new MutationObserver((mutations) => {
+                for (let mutation of mutations) {
+                    // Check if the element was deleted or style attributes were modified
+                    const elementTampered = !document.getElementById('_secure_tracker_') || 
+                                           (mutation.target.id === '_secure_tracker_' && mutation.type === 'attributes');
+                    
+                    if (elementTampered) {
+                        alert('System Warning: Modifying the author watermark violates academic integrity policies.');
+                        window.location.reload(); // Hard reset to bring back the watermark
+                        break;
+                    }
+                }
+            });
+
+            // Start actively monitoring the body structure
+            guardianObserver.observe(document.body, { 
+                attributes: true, 
+                childList: true, 
+                subtree: true,
+                attributeFilter: ['style', 'class', 'id']
+            });
+        });
+    })();
+    </script>    
 </body>
 </html>

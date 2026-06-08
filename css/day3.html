@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day3</title>
+    <style>
+        *{
+            color:blue;
+
+        }
+
+        div{
+            background-color: blue;
+            opacity: 0.5;
+            height:100px;
+            width: 100px;
+            border:2px dashed red;
+            color:white;
+            padding:20px;
+        }
+        .contentbox{
+            box-sizing: content-box;  /* 100px+20px+20px*/
+        }
+        
+        .borderbox{
+            box-sizing: border-box; /*100px*/
+
+        }
+
+        #radex{
+            border-radius: 50px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="clrsamp">
+        <div class="c2">
+            P
+        </div>
+        <img src="nature.jpg" alt="">
+    </div>
+
+<BR><br><BR><br><BR><br><BR><br>
+    <div class="contentbox">
+        Contentbox
+    </div>
+
+    <div class="borderbox">
+        Border Box
+    </div>
+
+    <div id="radex">
+        input
+    </div>
+    
+</body>
+</html>
