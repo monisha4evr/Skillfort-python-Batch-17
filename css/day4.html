@@ -1,52 +1,35 @@
-div.static {
-  position: static;
-  border: 3px solid #73AD21;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 4 </title>
+</head>
+<style>
+    .container{
+      background-color: bisque;
+      height: 300px;
+      display:flex;
+      gap:20px;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    .divclass{
+      
+      background-color: blue;
+      height:100px;
+      width: 100px;
+    }
+</style>
 
+<body>
+  <div class="container">
+    <div class="divclass" style="flex-grow:2 ; ">Div1</div>
+    <div class="divclass">Div2</div>
+    <div class="divclass">div3</div>
 
-div.relative {
-  position: relative;
-  left: 30px;
-  border: 3px solid #73AD21;
-}
-
-
-div.fixed {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 300px;
-  border: 3px solid #73AD21;
-}
-
-
-div.relative {
-  position: relative;
-  width: 400px;
-  height: 200px;
-  border: 3px solid green;
-}
-
-div.absolute {
-  position: absolute;
-  top: 80px;
-  right: 0;
-  width: 200px;
-  height: 100px;
-  border: 3px solid red;
-}
-
-
-div.sticky {
-  position: sticky;
-  top: 0;
-  background-color: green;
-  border: 2px solid #4CAF50;
-}
-
-img {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: -1;
-}
+  </div>
+  
+</body>
+</html>
