@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallery{
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .class1{
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .class1 img{
+            width: 100%;
+            display: block;
+            border-radius: 25px 25px 0 0;
+            background-color: blue;
+        }
+
+        .Imgct{
+            position: relative;
+        }
+
+        .test{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 5px 12px;
+            background: antiquewhite;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .smilee{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 22px;
+        }
+
+        .inner{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .inner h5,
+        .inner p{
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+    <div class="gallery">
+
+        <div class="class1">
+            <div class="Imgct">
+                <img src="nature.jpg" alt="Nature">
+                <span class="test">Guest Favorite</span>
+                <span class="smilee">&#128568;</span>
+            </div>
+
+            <div class="inner">
+                <h5>Selfie Image</h5>
+                <p>⭐ 4.3</p>
+            </div>
+        </div>
+
+        <div class="class1">
+            <div class="Imgct">
+                <img src="nature.jpg" alt="Nature">
+                <span class="test">Guest Favorite</span>
+                <span class="smilee">&#128568;</span>
+            </div>
+
+            <div class="inner">
+                <h5>Selfie Image</h5>
+                <p>⭐ 4.3</p>
+            </div>
+        </div>
+
+        <div class="class1">
+            <div class="Imgct">
+                <img src="nature.jpg" alt="Nature">
+                <span class="test">Guest Favorite</span>
+                <span class="smilee">&#128568;</span>
+            </div>
+
+            <div class="inner">
+                <h5>Selfie Image</h5>
+                <p>⭐ 4.3</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+    
+</body>
+</html>

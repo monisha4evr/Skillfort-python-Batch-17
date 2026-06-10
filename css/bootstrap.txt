@@ -1,0 +1,53 @@
+1. What is Bootstrap?
+
+👉 It’s a CSS + JavaScript library.
+
+👉 Provides ready-made styles.
+(buttons, grids, forms, navbars, modals)
+
+👉 Makes websites mobile-friendly by default.
+
+2. How to Set Up Bootstrap
+
+👉 Using CDN (simplest way):
+Just include this in your HTML <head>:
+
+<!-- Latest Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS (for components like modals, dropdowns) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+👉 Installing Locally (via npm/yarn):
+If you’re using a project with Node.js:
+
+npm install bootstrap
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
+3. How to Use Bootstrap
+
+Bootstrap is class-based → you add predefined classes to HTML tags.
+
+Button
+
+<button class="btn btn-primary">Click Me</button>
+<button class="btn btn-danger">Delete</button>
+
+Grid System (for layout)
+
+<div class="container">
+  <div class="row">
+    <div class="col-6">Left</div>
+    <div class="col-6">Right</div>
+  </div>
+</div>
+
+Navbar
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">MySite</a>
+  </div>
+</nav>
