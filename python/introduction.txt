@@ -1,1 +1,195 @@
-Python high level, interpreter,Programming Language
+Recommended Complete Flow
+Input / Output
+Type Conversion
+Variables
+Data Types
+Operators
+If / Else
+
+Strings
+List
+Tuple
+Set
+Dictionary
+
+Loops
+Functions
+
+File Handling
+Exception Handling
+OOP
+Enum
+Modules & Packages
+-----------------------------
+
+what is python?
+    pyhton is high-level,interpreted,General purpose programming Language.
+
+installation
+
+python download 
+python 3.14.0
+2nd checkbox.click pani install kodukanum.
+
+start-> idle ->
+
+-------------------------------------
+pip --version
+cmd=> c"\User\pip install jupyter
+folder\file=> taskbar->cmd
+taskbar\jupyter
+-------------------------------------
+
+Key features:
+    Simple and readable Syntax
+    cross platform support
+    Multiple paradigms.
+    vast standard Library and 
+    support 1000's of third party Modules(Collection of  pre-written python code created by individual developers or communities - to use this pip install)
+Note: PIP python install package /preferred installer program.
+PyPI: python package index.
+modules example: django,pandas
+built in modules: (math,os)
+
+Disadvantage:   
+    1. Slow Execution Speed:
+        1. Dynamic Typing
+        2. Everything is an Object
+        3. Garbage Collection
+
+    Partially interpreter
+    Python is called partially interpreted because Python source code is first compiled into bytecode, and then the Python Virtual Machine interprets and executes that bytecode line by line.
+
+    Python is slower because it is an interpreted and dynamically typed language.
+It performs runtime type checking, object handling, and garbage collection, which add extra processing overhead.
+
+2. High Memory Consumption:
+    Python consumes more memory because everything in Python is treated as an object.
+Each object stores additional information like datatype, reference count, and metadata.
+Python also uses dynamic typing and garbage collection, which require extra memory management.
+
+Rules in Python Syntax
+    1. Python is case-sensitive
+    2. Indentation is important
+    3. No need for {} braces
+    4. Statements end automatically in a new line
+
+    
+ 
+
+To save:
+extention .py
+
+--------------------------------------------------------
+Input and output Operation:
+    In Python, input and output (I/O) operations allow a program to interact with the user by receiving data and displaying results.
+
+1. Output Operation (print())The print() function sends data to the screen. It can print strings, variables, or the results of expressions.
+        1.print("Hello, World!")
+
+        2.  name = "Alice"
+            age = 25
+            print("Name:", name, "Age:", age)
+
+        3. print(f"Next year, {name} will be {age + 1} years old.")
+
+2. Input Operation (input())The input() function pauses program execution and waits for the user to type something into the terminal.
+
+    Crucial Rule: The input() function always returns the data as a String (str), even if the user types a number.
+
+--------------------------------------------------------------
+comment (commandline):
+    non-executable lines of text used to explain code, make it more readable, or temporarily disable parts of a script
+    1. Single-Line Comments (#)
+    2. MultiLine Comments ( option 1:  # , option 2 : multi Line String """ """)
+
+---------------------------------------------------------------
+Variables:
+    Variables are used to store data.its like a container
+
+    Rules:
+    1. Allowed Characters: Names can only contain letters (A-Z, a-z), digits (0-9), and underscores (_).
+    2. Starting Character: Names must start with a letter or an underscore. They cannot start with a number.
+    3. No Spaces: You cannot use spaces inside a variable name.
+    4. No Special Characters: Symbols like @, $, %, -, or ! are strictly forbidden.
+    5. Reserved Keywords: You cannot use Python's built-in keywords (such as if, for, while, class, or import) as variable names.
+
+-----------------------------------------------------
+Data types:
+    everything is an object, 
+    including basic data types like integers, floats, booleans, and strings.
+
+    1. Numeric Types (  integer(int) , float (float), complex)
+    2. Sequence Types (  string (str), list (list),tuple (tuple),Range (range))
+    3. Mapping and Set Types(  Dictionary (dict),Set (set),Frozenset (frozenset))
+    4. Other Core Types
+        bool: Truth values (True or False),
+        NoneType: Represents no value (None)
+
+    ordered , un ordered, 
+
+    Mutable: The object's data can be modified, added to, or deleted directly in memory without changing its original memory address (id()).
+    
+    Immutable: The object's data cannot be changed. Any attempt to modify it forces Python to create a brand-new object at a new memory address.
+
+Give Examples on:
+    type(),id()
+
+Collection
+    1. List → “Students attendance list”
+    2. Tuple → “Aadhar Number / Train Seat”
+    3. Set → “Unique Email
+    4. Dictionary → “Student Record”
+
+Immutable Core Types
+    Once created, the value of these objects cannot be changed in memory. 
+    If you modify them, Python creates a completely new object.
+        Integers (int)
+        Floats (float)
+        Booleans (bool)
+        Strings (str)
+        Tuples (tuple)
+
+Mutable Core Types
+    The value of these objects can be changed directly in memory
+    without creating a new object.
+        Lists (list)
+        Dictionaries (dict)
+        Sets (set)
+
+
+1.typecasting
+    the process of converting a variable from one data type to another
+    1. Explicit Type Casting (Manual)
+    2. Implicit Type Casting
+        Python automatically converts one data type to another 
+        without programmer intervention when it is safe to do so
+    Key Considerations
+    Data Loss: Converting from a "higher" type (like a float) to a "lower" type (like an integer) will result in data loss, such as losing decimal precision.
+    1. Non-Numeric Strings to Numbers
+    2. Non-Iterable Types to CollectionsYou cannot cast single, non-iterable values (like integers, floats, or booleans) into sequence types like a list, tuple, or set.
+
+    TypeError means you used the wrong type of object 
+    ValueError means the object type is correct, but its actual value is invalid.
+
+
+
+| Conversion     | Rule                            |
+| -------------- | ------------------------------- |
+| String → Int   | Only digits (0-9), +, -         |
+| String → Float | Digits, +, -, one decimal point |
+| Float → Int    | Decimal part removed            |
+| Int → Float    | `.0` added                      |
+| Int → String   | Always possible                 |
+| Float → String | Always possible                 |
+| String → Bool  | Empty string=False, others=True |
+
+
+int() Rules
+Allowed  : 0-9, +, -
+Not Allow: ., letters, special chars
+
+float() Rules
+Allowed  : 0-9, +, -, .
+Not Allow: letters, special chars
+-------------------------------------------------------------------
