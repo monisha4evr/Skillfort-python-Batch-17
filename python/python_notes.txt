@@ -193,3 +193,66 @@ float() Rules
 Allowed  : 0-9, +, -, .
 Not Allow: letters, special chars
 -------------------------------------------------------------------
+operators:
+
+Operators
+1. Arithmetic operator (+,-,*,/,%, //,**)
+2. Assignment Operator (= , +=, -=, *=, /=)
+3. Comparison Operator (==, >=,<= !=,>,<)
+4. logical Operator (and or not)
+5. Bitwise Operator (& | ^ ~) Xor - (1 0 = 1) , ~ 2scompliment ( -(x + 1))
+6. membership Operator (in ,not in)
+7. Identity Operator (is, is not)
+
+
+String:
+1. indexing:
+
+    s = "Python"
+    print(s[0])   # 'P'
+    print(s[-1])  # 'n'
+    # print(s[10]) -> IndexError
+
+2. Slicing (s[start:end:step])
+    s = "Python"
+    print(s[1:4])   # 'yth' (indices 1, 2, 3)
+    print(s[:3])    # 'Pyt' (shortcut for 0 to 3)
+    print(s[::2])   # 'Pto' (every second character)
+    print(s[::-1])  # 'nohtyP' (reverses string)
+    print(s[50:90]) # '' (no error)
+    print(a[6:0:-2]) #nhy
+
+3. Concatenation (+)=> Type Strictness: You can only concatenate strings with other strings. 
+    s1 = "Py" + "thon" # 'Python'
+    # s2 = "Version " + 3 -> TypeError
+    s2 = "Version " + str(3) # 'Version 3'
+
+4. Repetition (*)
+    print("Hi" * 3)  # 'HiHiHi'
+    print("Hi" * 0)  # ''
+
+
+Method	Description
+upper()	    => Converts to uppercase
+lower()	    => Converts to lowercase
+title()	    => Capitalizes each word
+capitalize()=> Capitalizes first letter
+strip()	    => Removes spaces (left & right)
+lstrip()    => Removes left spaces
+rstrip()    => Removes right spaces
+replace(a,b)=> Replace substring
+split()	    => Split string into list
+join()	    => Join elements with a separator
+find()	    => Returns index of substring
+index()	    => Like find but error if not found
+startswith()=> Check beginning
+endswith()	=> Check ending
+count()	    => Count occurrences
+isalpha()	=> Only alphabets
+isdigit()	=> Only digits
+isalnum()	=> Alphabets + numbers
+islower()	=> All lowercase?
+isupper()	=> All uppercase?
+swapcase()	=> Change lower <-> upper
+format()	=> Insert values
+len(string) => Returns the total number of characters
