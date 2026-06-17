@@ -192,6 +192,7 @@ Not Allow: ., letters, special chars
 float() Rules
 Allowed  : 0-9, +, -, .
 Not Allow: letters, special chars
+
 -------------------------------------------------------------------
 operators:
 
@@ -256,3 +257,87 @@ isupper()	=> All uppercase?
 swapcase()	=> Change lower <-> upper
 format()	=> Insert values
 len(string) => Returns the total number of characters
+
+Split and Join
+--------------
+
+a="apple is my fav fruit"
+print(a.split(' '))
+
+a=["apple","orange","banana"]
+print(' '.join(a))
+
+a=[1,2,3,4]
+print(''.join(map(str,a)))
+
+print(''.join(str(i) for i in a))
+
+
+Collection:
+1. list
+2. Tuple
+3. Set
+4. Dict 
+
+
+3. set
+1. Overlapping Items (Intersection)
+    This extracts only the elements that exist in both sets.
+    1. Using the Intersection Operator (&)
+    2. Using the .intersection() Method
+
+2. Subtracting Sets (Difference)
+    This removes elements of the second set from the first set. Order matters here
+    1. Using the Subtraction Operator (-)
+    2. Using the .difference() Method
+    
+3. Create a New Combined Set
+    These methods leave your original sets (set1 and set2) unchanged.
+    1. Using the Union Operator (|)
+    2. Using the .union() Method
+    
+4. symmetric difference
+    The symmetric difference finds elements that are in either of the sets, but not in both
+    1. Using the Symmetric Difference Operator (^)
+    2. Using the .symmetric_difference() Method
+
+                    Update:
+update = Add everything.
+intersection_update = Keep only duplicates.
+difference_update = Subtract duplicates.
+symmetric_difference_update = Delete duplicates, keep the rest.
+
+
+
+update
+1. .update() (Union In-Place)Adds all elements from the second set into the first set
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+
+set1.update(set2)
+print(set1)  # Output: {1, 2, 3, 4, 5, 6}
+
+2. .intersection_update()Keeps only the elements that exist in both sets.
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+
+set1.intersection_update(set2)
+print(set1)  # Output: {3, 4}
+
+
+3. .difference_update()Removes all elements of the second set from the first set.
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+
+set1.difference_update(set2)
+print(set1)  # Output: {1, 2}
+
+4. .symmetric_difference_update()
+Keeps elements found in either set, but removes the ones they share.
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+
+set1.symmetric_difference_update(set2)
+print(set1)  # Output: {1, 2, 5, 6}
+
+
