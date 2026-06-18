@@ -141,5 +141,3 @@ for i in b.values():
     print(i)
 
 
-a=[1,2,3,4]
-a.

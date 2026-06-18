@@ -1,0 +1,31 @@
+1 st Assessment
+-----------------
+
+Section A – 10 × 1 = 10 Marks
+1.What is the datatype of 10.5? 
+2.What is the output of type(True)? 
+3.Convert integer 100 into string using Python. 
+4.What is the output of str(10) + str(20)? 
+5.Which operator is used for exponentiation? 
+6.What is the difference between = and ==?  5==6
+7.Can a List contain duplicate values? 
+8.Can a Set contain duplicate values? 
+9.Which brackets are used to create a Tuple? 
+10.Which method is used to add an item to a List? 
+
+Section B – 5 × 2 = 10 Marks
+1.Explain implicit and explicit type casting with examples. 
+2.Differentiate between List and Tuple (any 2 points). 
+3.Differentiate between Set and Dictionary. 
+4.Explain any four arithmetic operators with examples. 
+5.Write the syntax for creating List, Tuple, Set and Dictionary. 
+
+
+Section C – 6 × 5 = 30 Marks
+
+1.Explain all Python data types with examples. 
+2.Explain String slicing with suitable examples. 
+3.Write a program to concatenate two strings and display the result. 
+4.Create a List of 5 subjects and demonstrate append(),insert(). 
+5.Create a Dictionary to store student details and perform add, update, and delete operations. 
+6.Compare List, Tuple, Set and Dictionary with examples and write their advantages.
