@@ -1,44 +1,18 @@
-data type
+names_list = ["Arun","mm","laya"]
+ages_list = [14,23,22]
+grades_list = ["9th","r4","e3"] 
 
-int 
-float
-string 
-boolean
+var=list(zip(names_list, ages_list, grades_list))
 
-a="123"
-
-print(type(a))
-list [1,2,3]
-tuple (1,2,3)
-set  {1,2,3}
-dict {k:v}
-
-none 
+for i,m,n in var:
+    print(i)
+    print(m)
+    print(n)
+    
+for i in var:
+    for j in i:
+        print(j)
 
 
-a=20
-b=20
-c=20
-print(id(a))
-print(id(b))
-print(id(c))
-
-a=[1,2,3,4,5]
-b=[1,2,3,4]
-print(id(a))
-print(id(b))
-
-#  implicit
-#  explicit int(),float(),str(),list()
- 
-a=10
-b=1.5
-c=a+b
-print(type(c))
-
-a=int("abc")
-b=12
-c=a+b
-print(c) 
- 
- 
+for name, age, grade in zip(names_list, ages_list, grades_list):
+    print(name,age,grade)

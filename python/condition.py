@@ -79,5 +79,23 @@ match day:
         print("Weekend")
         
     
+print("Even" if 4%2==0 else "Odd")
 
+age=18
+has_voter_id=True
+if age>=18 :
+    if has_voter_id :
+        print("Eligible to Vote")
+    else:
+        print("Get Voter Id ")
+else:
+    print(" Above 18 is Eligible to Vote ")
+    
+# Ternary operator:
+
+age=19
+print("You are Above 18 " if age>=18 else " You are minor")
+
+a=5
+print("Even" if a%2==0 else " Odd")
 

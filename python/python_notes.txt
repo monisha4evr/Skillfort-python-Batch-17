@@ -1,25 +1,81 @@
-Recommended Complete Flow
+Python Syllabus
+----------------
+----------------
+
+
 Input / Output
 Type Conversion
 Variables
 Data Types
-Operators
-If / Else
 
+Operators
 Strings
+
 List
 Tuple
 Set
 Dictionary
 
+Conditional Statement
 Loops
-Functions
+    Iterating with python loops
+    while loop
+    for loop
+    range
+    break
+    continue
+    pass
+    enumerate
+    zip
+    assert  (Debugging Tool => example: assert condition,"optional Message")
 
-File Handling
+List and Dictionaries comprehension
+    The syntax for list comprehension
+    The syntax for dict comprehension
+Functions
+    Creating functions
+    Calling functions
+    No return type without argument
+    No return type with argument
+    Return type without argument
+    Return type with argument
+    Variable-length arguments (*args)
+    Keyword Arguments
+    Variable Keyword length arguments (**kargs)
+    Default parameter function
+    Global and local variables
+    Recursion.
+
+Anonymous Function
+    Lambda with filter
+    Lambda with map
+    Lambda with reduce
+Generators  
+    Creating and using generators
+
+Modules 
+    Creating modules
+    Importing functions & Variables from a different module
+    Python built-in modules (math, random, datetime, collections, statistics)
+
 Exception Handling
+    Syntax errors & Logical errors
+    Handling errors using try, except and finally
+
+Regex
+    Understanding the use of regex
+    (re.search(), re.compile(), re.find(), re.split(), re.sub())
+File Handling
 OOP
-Enum
-Modules & Packages
+    Creating classes & Objects
+    Attributes and methods
+    Class & Static methods
+    Understanding __init__ constructor method
+    Inheritance
+    Abstraction & Encapsulation
+    Polymorphism
+    Operator overloading
+
 -----------------------------
 
 what is python?
@@ -339,5 +395,140 @@ set2 = {3, 4, 5, 6}
 
 set1.symmetric_difference_update(set2)
 print(set1)  # Output: {1, 2, 5, 6}
+
+conditional statement
+control the execution flow of a program by running specific blocks of code only when certain conditions are met
+💡 Crucial Rule: IndentationUnlike languages that use curly braces { }, Python relies strictly on whitespace indentation (typically 4 spaces) to define the scope of a code block. Incorrect indentation throws an 
+1. The if Statement
+    score = 85
+    if score >= 50:
+        print("You passed!")
+2. The if-else Statement
+    Provides an alternative block of code that runs if the initial condition evaluates to False
+    age = 16
+    if age >= 18:
+        print("Eligible to vote.")
+    else:
+        print("Too young to vote.")
+
+3. The if-elif-else Chain
+    signal = "Yellow"
+
+    if signal == "Red":
+        print("Stop")
+    elif signal == "Yellow":
+        print("Slow down")
+    else:
+        print("Go")
+
+4. Nested Conditional Statements
+    is_logged_in = True
+    has_permission = False
+
+    if is_logged_in:
+        if has_permission:
+            print("Welcome to the Admin Dashboard.")
+        else:
+            print("Access denied: Permissions missing.")
+    else:
+        print("Please log in first.")
+
+Ternary Operator (Conditional Expression):
+    status = "Adult" if age >= 18 else "Minor"
+
+Loops in Python
+    Repeat a task multiple times
+
+2.iterating with python loops
+    fruits = ["Apple", "Mango", "Orange"]
+
+    for fruit in fruits:
+        print(fruit)
+
+    Real Life:
+        Attendance register la Student by student check panradhu
+
+3. while
+count = 1
+
+while count <= 5:
+    print(count)
+    count += 1
+
+4. name = "Monisha"
+
+for char in name:
+    print(char)
+
+    1.Example 3 - Shopping Cart
+    2.Example 4 - Marks Calculation
+    3.Example 5 - Count Vowels
+    4.Example 6 - Email Validation Characters
+
+5. Range
+range(start, stop, step)
+
+for i in range(5):
+    print(i)
+
+for i in range(1, 6):
+    print(i)
+
+for i in range(1, 11, 2):
+    print(i)
+
+fruits = ["Apple", "Mango"]
+
+for index, fruit in enumerate(fruits):
+    print(index, fruit)
+
+
+Enumerate:
+fruits = ["Apple", "Mango"]
+
+for index, fruit in enumerate(fruits):
+    print(index, fruit)
+
+
+zip
+names = ["Ram", "Sam"]
+marks = [80, 90]
+
+for name, mark in zip(names, marks):
+    print(name, mark)
+
+assert:
+age = 15
+
+assert age >= 18, "Age must be 18 or above"
+
+List comprehension
+numbers = [i for i in range(1, 6)]
+
+print(numbers)
+----------
+squares = [i*i for i in range(1, 6)]
+
+print(squares)
+
+----------
+
+evens = [i for i in range(1,11) if i%2==0]
+
+print(evens)
+
+Dictionary:
+Normal Way:
+
+result = {}
+
+for i in range(1, 6):
+    result[i] = i*i
+
+comprehension:
+result = {i:i*i for i in range(1,6)}
+
+print(result)
+
 
 

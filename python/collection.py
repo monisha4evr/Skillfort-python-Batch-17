@@ -141,3 +141,18 @@ for i in b.values():
     print(i)
 
 
+a=[1,2,3]
+b=[1,2,3]
+c=[...a,...b]
+
+
+def outer():
+    a=1
+    def inner():
+        nonlocal a
+        a=a+1
+        print(a)
+    return inner
+inn=outer()
+inn()
+inn()
