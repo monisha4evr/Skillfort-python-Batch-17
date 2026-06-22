@@ -16,3 +16,5 @@ for i in var:
 
 for name, age, grade in zip(names_list, ages_list, grades_list):
     print(name,age,grade)
+    
+    

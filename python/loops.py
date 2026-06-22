@@ -1,6 +1,6 @@
-loops
-1. for 
-2. while 
+# loops
+# 1. for 
+# 2. while 
 
 #range(start,end,step)
 
@@ -38,11 +38,11 @@ for i in a:
 print(tot)
 
 #syntax:
-initialization
+# initialization
 
-while condition :
-    # statement
-    increment/decrement
+# while condition :
+#     # statement
+#     increment/decrement
     
 i=1
 while i<=5:
@@ -85,27 +85,25 @@ for i in range(1,6):
 #     a//=10
     
  
-Task
---------   
-*****
-*****
-*****
-*****
-*****
+# Task
+# --------   
+# *****
+# *****
+# *****
+# *****
+# *****
 
-1
-12
-123
-1234
-12345
+# 1
+# 12
+# 123
+# 1234
+# 12345
 
-1
-22
-333
-4444
-55555
-
-    
+# 1
+# 22
+# 333
+# 4444
+# 55555
     
 # *
 # **
@@ -116,24 +114,203 @@ Task
 for i in range(1,6):
     print("*" *i)
 
-*****
-****
-***
-**
-*
+# *****
+# ****
+# ***
+# **
+# *
 
-     *
-    **
-   ***
-  ****
- *****
+#      *
+#     **
+#    ***
+#   ****
+#  *****
+
  
 
+print("hello world")
+print("hello world")
+print("hello world")
+print("hello world")
+print("hello world")
+print("hello world")
+print("hello world")
+print("hello world")
 
-
+for i in range(11):
+    print(i)
     
+a=[1,2,9,4,5]
+for i in a:
+    print(i)
 
+
+# ----------------------
+
+for i in range (1,6):
+    print("*"*i)
     
+for i in range (1,7): 
+    for j in range(1,i):
+        print(j,end="")
+    print()
+ 
+# execution     
+
+
+# i=1 
+#     range(1) => j=0         => *  
+#              => j=1(F)
+             
+# i=2
+#     range(2) 
+#         => j=0             =>**
+#         => j=1
+        
+# i=3
+#     range(3)
+#         =>j=0
+#         =>j=1
+#         =>j=2        =>***
+        
+        
+for i in range(1,5):
+    for j in range(i):
+        print(i,end="")
+    print()
+    
+    
+# 1
+# 22
+# 333
+# 4444
+# 55555
+
+
+for i in range(5,0,-1):
+    for j in range(i):
+        print("*",end="")
+    print()
+    
+rows=5   
+for i in range(1,rows):
+    print(" "*(rows-i)  + "*"* i )
+    
+    
+a=[1,2,2,3,4,4,5,6]
+#print(list(set(a)))
+uniquevalue=[]
+for i in a:
+    if i not in uniquevalue:
+        uniquevalue.append(i)
+        
+print(uniquevalue)
+
+# break
+# continue
+# pass
+
+
+age=21
+if age>20:
+    pass
+
+def fname():
+    pass
+
+print("Loops Start Here")
+for i in range(11):
+    print(i)
+    if i==5:
+        break
+
+print("Loops Ends here")
+
+
+print("Loops Start Here")
+for i in range(11):
+   
+    if i==5:
+        continue
+    print(i)
+print("Loops Ends here")
+
+# enumerate
+# zip
+# List and Dictionaries comprehension
+
+for i,n in enumerate(range(1,11)):
+    print(i,n)
+
+a=["name","username","password"]
+b=["Ganesh","ganesh_1510","ganesh@123","address"]
+
+for i,v in zip(a,b):
+    print(i,v)
+
+print([i**i for i in range(11)])
+print([i for i in range(11) if i%2==0])
+
+
+a=["name","username","password"]
+b=["Ganesh","ganesh_1510","ganesh@123"]
+print({i:v for i,v in zip(a,b)})
+
+
+Task 1:
+
+5*1=5
+5*2=10
+
+Task 2:
+"even" 1 even 3 even 5
+
+task 3:
+
+Flower
+
+
+
+for i in range(11):
+    print("even" if i%2==0 else i)
+
+
+a="flower"
+vowels=['a','e','i','o','u']
+cnt=0
+consonent=0
+for i in a:
+    if i in vowels:
+        cnt+=1
+    else:
+        consonent+=1
+print(cnt)
+print(consonent)
+
+Task 4:
+--------
+[10,20,15,20,30,40] # remove Function
+
+task 5:
+--------
+
+[1,9,5,3,7,4,2] #sort
+
+task 6:  
+[0,4,3,0,1,0,6]
+
+output:[1,3,4,6,0,0,0]
+
+
+
+
+
+
+
+
+
+
+
 
     
 
