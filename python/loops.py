@@ -274,6 +274,9 @@ Flower
 for i in range(11):
     print("even" if i%2==0 else i)
 
+#    ( or )
+
+print([i if i%2==1 else "Even" for i in range(11)])
 
 a="flower"
 vowels=['a','e','i','o','u']
@@ -287,19 +290,28 @@ for i in a:
 print(cnt)
 print(consonent)
 
-Task 4:
---------
+# Task 4:
+# --------
 [10,20,15,20,30,40] # remove Function
 
-task 5:
---------
+# task 5:
+# --------
 
 [1,9,5,3,7,4,2] #sort
 
-task 6:  
-[0,4,3,0,1,0,6]
+# task 6:  
 
+[0,4,3,0,1,0,6]
 output:[1,3,4,6,0,0,0]
+
+a= [0,4,3,0,1,0,6]
+for i in range(len(a)):
+    for j in range(i):
+        if a[i] != 0 :
+            a[i],a[j]=a[j],a[i]
+print(a)
+
+   
 
 
 
