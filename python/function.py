@@ -184,3 +184,60 @@ def funcname(a,**b):
 
 a=10
 funcname(a,name="apple",color="red",price="105")
+
+Task 1: count Vowels
+task 2: FActorial
+task 3: palindrome
+task 4: count even number in list [3,4,5,6,7,2,9,1]
+task 5: sum of List Element
+
+
+
+# lambda function:
+# -----------------
+#Singleline Expression
+# Anonymous Function
+#Syntax: lambda p1,p2 : expression 
+
+sample = lambda a,b,c : a+b+c
+print(sample(10,20,30))
+
+map()
+filter()
+reduce()
+
+a=[1,2,9,3,4,5,6]
+res=map(lambda i:i*2,a)
+print(list(res))
+
+result =filter(lambda i:i%2==0,a)
+print(list(result))
+
+from functools import reduce
+r=reduce(lambda b,c : b+c,a)
+print(r)
+
+# Generator:
+# ---------
+
+def fname():
+    yield 1
+    yield 2
+    yield 3
+    
+f=fname()
+print(next(f))
+print(next(f))
+print(next(f))
+
+
+
+
+
+
+
+
+
+
+
+
