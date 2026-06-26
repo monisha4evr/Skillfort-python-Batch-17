@@ -1,120 +1,110 @@
-<!-- 
-    entities
-    1. table
-    2. form tags
-    3. semantic tags
-    4. container tags
-    5. style and script 
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day3</title>
-    <style>
-        .classone{
-            background-color: bisque;
-        }
-        #idone{
-            background-color:aquamarine;
-        }
-    </style>
+    <title>day3</title>
 </head>
 <body>
+    <center> <h1>HTML</h1></center>
 
-    &entitiesname;
-&#entitiesnumber;
-<hr>
+    <!-- <h1>Sample</h1> -->
 
-&gt;
-&lt;
-<br>
-&#128512;
+    <h1>heading 1 </h1>
+    <h2>heading 1 </h2>
+    <h3>heading 1 </h3>
+    <h4>heading 1 </h4>
+    <h5>heading 1 </h5>
+    <h6>heading 1 </h6>
+    <b>Bold</b><br>
+    <u>Underline</u><br>
+    <i>Italic</i><br>
 
-<table>
-    <tr>  
-        <!-- Table row -->
-        <th></th>
-        <!-- Table Heading -->
-        <td></td>
-            <!-- table data -->
-    </tr>
-</table>
+    void/Empty 
+    <br>  <!-- <br> line break  -->
+    <hr> <!-- <hr> Horizantal line   -->
+    <img src="" alt="">
+
+    attribute:
+     <img src="nature1.jpg" alt="No image Found" height="500" width="500"> 
+
+     list
+        1. ordered list (1,2,3,4)
+        2. unordered list(disc,circle)
+        3. definition list(apprevation)
+ 
+        <ol type="A"> Fruits
+            <li>Apple </li>
+            <li>orange</li>
+            <li>Banana</li>
+        </ol>
+
+        <ul type="circle">Vegetables
+            <li>Brinjal</li>
+            <li>Carrot</li>
+            <li>Betroot</li>
+        </ul>
+        <dl>
+            <dt>www</dt>
+            <dd>world wide web</dd>
+        </dl>
+
+        anchor Tag:
+
+        <a href="day2.html" target="_blank" title="day2">Click me</a>
+
+        inline and  Block 
+        <b style="background-color: brown;">Bold</b><i>italic</i>
+        <h1 style="background-color: green;">bold</h1>
+
+        <table style="border:1px solid red; border-collapse: collapse;">
+            <tr style="border:1px solid red"> 
+                <th>sno</th>
+                <th>Student Name</th>
+                <th>Address</th>
+            </tr>
+            <tr style="border:1px solid red">
+                <td>1</td>
+                <td>Komala</td>
+                <td>Chennai</td>
+            </tr>
+        </table>
+        <br>
+
+        <table border="1">
+            <tr ><th rowspan="3">Student Details</th></tr>
+            <tr > 
+                <th>sno</th>
+                <th>Student Name</th>
+                <th>Address</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Komala</td>
+                <td>Chennai</td>
+            </tr>
+        </table>
+
+        <br>
+
+        
+        <table border="1">
+            <tr ><th colspan="3">Student Details</th></tr>
+            <tr > 
+                <th>sno</th>
+                <th>Student Name</th>
+                <th>Address</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Komala</td>
+                <td>Chennai</td>
+            </tr>
+        </table>
+
+        
 
 
-<table border="1">
-    <tr><th colspan="3">Student Details</th></tr>
-    <tr>
-        <th>S.no</th>
-        <th>Name</th>
-        <th>Course</th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>Naveen</td>
-        <td>Python</td>
-    </tr>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>Sanjeev</td>
-        <td>Python</td>
-    </tr>
-</table>
 
-<br>
-
-<b>bold</b><i>Italic</i>
-<h1>Heading</h1>
-
-container
-1. Div
-2. span
-
-
-Style 
-
-3 types:
-1. inline 
-2. Internal
-3. External
-
-style="property:value;"
-
-
-<div style="background-color:red;">
-    <span style="background-color:antiquewhite; font-size:50px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, accusamus! Eos culpa corporis reprehenderit perspiciatis praesentium id! Deleniti eum cumque vitae officiis ipsa, soluta architecto alias facere modi tempora asperiores.</span>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum sapiente aspernatur eius odit, distinctio voluptatibus placeat cupiditate vitae eum nihil quia eos? Magnam nesciunt necessitatibus tenetur! Dolores, soluta eligendi. Quos!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum sapiente aspernatur eius odit, distinctio voluptatibus placeat cupiditate vitae eum nihil quia eos? Magnam nesciunt necessitatibus tenetur! Dolores, soluta eligendi. Quos!</p>
-    <p style="background-color:aqua;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum sapiente aspernatur eius odit, distinctio voluptatibus placeat cupiditate vitae eum nihil quia eos? Magnam nesciunt necessitatibus tenetur! Dolores, soluta eligendi. Quos!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum sapiente aspernatur eius odit, distinctio voluptatibus placeat cupiditate vitae eum nihil quia eos? Magnam nesciunt necessitatibus tenetur! Dolores, soluta eligendi. Quos!</p>
-</div>
-
-
-id,class
-
-<div>
-<div id="idone">
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate non, enim iusto expedita fugiat autem consequatur! Rem deserunt soluta illum nostrum, officiis sapiente mollitia itaque qui eius commodi ad sunt?</p>
-
-</div>
-<div class="classone">
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id asperiores expedita adipisci amet? Deleniti, reprehenderit! Fugit pariatur deserunt soluta officia necessitatibus aperiam, cumque error aliquam, nam perspiciatis ipsa, quae accusantium?</p>
-</div>
-<div class="classone">
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia praesentium natus, impedit aspernatur accusamus incidunt reiciendis tempora asperiores alias hic minus iusto ipsa perferendis quibusdam quasi velit repellendus labore animi?</p>
-</div>
-
-
-</div>
-    
 </body>
 </html>
-
-
-
-
-
-

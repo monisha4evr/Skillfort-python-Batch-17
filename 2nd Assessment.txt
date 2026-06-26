@@ -1,0 +1,62 @@
+Part A - 1 Mark Questions (10 × 1 = 10 Marks)
+1. What is a variable in Python?
+
+2. Which data type is used to store decimal values?
+	a = 10.5
+
+3. What will be the output?
+
+	print(type("Hello"))
+4. How do you create an empty list?
+5. Which collection does not allow duplicate values?
+
+6. What will be the output?
+    x = 10
+    if x > 5:
+        print("Yes")
+7. Which loop is used when the number of iterations is known?
+8. What will be the output?
+    for i in range(3):
+        print(i)
+9. Which keyword is used to define a function?
+
+10. What will be the output?
+    def greet():
+        print("Hello")
+
+    greet()
+
+
+Part B - 2 Marks Questions (5 × 2 = 10 Marks)
+
+11. Write a Python program to check whether a number is even or odd.
+12. Create a list containing 5 fruits and print the third fruit.
+13. Write a loop to print numbers from 1 to 5.
+14. Create a dictionary to store:
+    Name = Ravi
+    Age = 22
+    Print the age.
+15. Write a function named square() that accepts a number and returns its square.
+
+Part C - 5 Marks Questions (3 × 5 = 15 Marks)
+
+16. Student Marks Program
+    Create variables for:
+    Student Name,Tamil Mark, English Mark, Maths Mark
+    Calculate: Total Marks, Average Marks
+    Print all details neatly.
+
+17. List and Loop
+    Given:
+    numbers = [10, 20, 30, 40, 50]
+    Using a loop:
+    Print each number
+    Find the sum of all numbers
+    Print the total
+
+18. Function + Condition
+    Write a function named check_pass(mark).
+    Conditions:
+    Mark >= 35 → "Pass"
+    Mark < 35 → "Fail"
+    Call the function with different marks and display the result.
