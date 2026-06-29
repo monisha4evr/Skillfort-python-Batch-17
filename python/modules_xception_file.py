@@ -127,13 +127,37 @@ try:
 except Exception as e:
     print(e)
 
+# raise
 
-class agecheck(Exception):
-    raise ("Age cant be negative")
 
-try :
-    def checkage(age):
-        if age<0 :
-            print("age is less than Zero")
-        
-except 
+
+
+# decorator
+# without changing original code expand the functionality
+# @
+
+
+def outer(func):
+    def wrapper():
+        print("HI")
+        func()
+    return wrapper
+
+@outer
+def greet():
+    print("Welcome to skillfort")
+
+greet()
+
+
+# regex
+# 1.search
+# 2.match
+# 3.test
+
+import re
+number="9908709888"
+pattern=(r"^[6-9]\d{9}$")
+print("valid" if re.match(pattern, number) else "invalid")
+
+
