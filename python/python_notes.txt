@@ -1,0 +1,984 @@
+Python Syllabus
+----------------
+----------------
+
+
+Input / Output
+Type Conversion
+Variables
+Data Types
+
+Operators
+Strings
+
+List
+Tuple
+Set
+Dictionary
+
+Conditional Statement
+Loops
+    Iterating with python loops
+    while loop
+    for loop
+    range
+    break
+    continue
+    pass
+    enumerate
+    zip
+    assert  (Debugging Tool => example: assert condition,"optional Message")
+
+List and Dictionaries comprehension
+    The syntax for list comprehension
+    The syntax for dict comprehension
+Functions
+    Creating functions
+    Calling functions
+    No return type without argument
+    No return type with argument
+    Return type without argument
+    Return type with argument
+    Variable-length arguments (*args)
+    Keyword Arguments
+    Variable Keyword length arguments (**kargs)
+    Default parameter function
+    Global and local variables
+    Recursion.
+
+Anonymous Function
+    Lambda with filter
+    Lambda with map
+    Lambda with reduce
+Generators  
+    Creating and using generators
+
+Modules 
+    Creating modules
+    Importing functions & Variables from a different module
+    Python built-in modules (math, random, datetime, collections, statistics)
+
+Exception Handling
+    Syntax errors & Logical errors
+    Handling errors using try, except and finally
+
+Regex
+    Understanding the use of regex
+    (re.search(), re.compile(), re.find(), re.split(), re.sub())
+File Handling
+
+OOP
+    Creating classes & Objects
+    Attributes and methods
+    Class & Static methods
+    Understanding __init__ constructor method
+    Inheritance
+    Abstraction & Encapsulation
+    Polymorphism
+    Operator overloading
+
+-----------------------------
+
+what is python?
+    pyhton is high-level,interpreted,General purpose programming Language.
+
+installation
+
+python download 
+python 3.14.0
+2nd checkbox.click pani install kodukanum.
+
+start-> idle ->
+
+-------------------------------------
+pip --version
+cmd=> c"\User\pip install jupyter
+folder\file=> taskbar->cmd
+taskbar\jupyter
+-------------------------------------
+
+Key features:
+    Simple and readable Syntax
+    cross platform support
+    Multiple paradigms.
+    vast standard Library and 
+    support 1000's of third party Modules(Collection of  pre-written python code created by individual developers or communities - to use this pip install)
+Note: PIP python install package /preferred installer program.
+PyPI: python package index.
+modules example: django,pandas
+built in modules: (math,os)
+
+Disadvantage:   
+    1. Slow Execution Speed:
+        1. Dynamic Typing
+        2. Everything is an Object
+        3. Garbage Collection
+
+    Partially interpreter
+    Python is called partially interpreted because Python source code is first compiled into bytecode, and then the Python Virtual Machine interprets and executes that bytecode line by line.
+
+    Python is slower because it is an interpreted and dynamically typed language.
+It performs runtime type checking, object handling, and garbage collection, which add extra processing overhead.
+
+2. High Memory Consumption:
+    Python consumes more memory because everything in Python is treated as an object.
+Each object stores additional information like datatype, reference count, and metadata.
+Python also uses dynamic typing and garbage collection, which require extra memory management.
+
+Rules in Python Syntax
+    1. Python is case-sensitive
+    2. Indentation is important
+    3. No need for {} braces
+    4. Statements end automatically in a new line
+
+    
+ 
+
+To save:
+extention .py
+
+--------------------------------------------------------
+Input and output Operation:
+    In Python, input and output (I/O) operations allow a program to interact with the user by receiving data and displaying results.
+
+1. Output Operation (print())The print() function sends data to the screen. It can print strings, variables, or the results of expressions.
+        1.print("Hello, World!")
+
+        2.  name = "Alice"
+            age = 25
+            print("Name:", name, "Age:", age)
+
+        3. print(f"Next year, {name} will be {age + 1} years old.")
+
+2. Input Operation (input())The input() function pauses program execution and waits for the user to type something into the terminal.
+
+    Crucial Rule: The input() function always returns the data as a String (str), even if the user types a number.
+
+--------------------------------------------------------------
+comment (commandline):
+    non-executable lines of text used to explain code, make it more readable, or temporarily disable parts of a script
+    1. Single-Line Comments (#)
+    2. MultiLine Comments ( option 1:  # , option 2 : multi Line String """ """)
+
+---------------------------------------------------------------
+Variables:
+    Variables are used to store data.its like a container
+
+    Rules:
+    1. Allowed Characters: Names can only contain letters (A-Z, a-z), digits (0-9), and underscores (_).
+    2. Starting Character: Names must start with a letter or an underscore. They cannot start with a number.
+    3. No Spaces: You cannot use spaces inside a variable name.
+    4. No Special Characters: Symbols like @, $, %, -, or ! are strictly forbidden.
+    5. Reserved Keywords: You cannot use Python's built-in keywords (such as if, for, while, class, or import) as variable names.
+
+-----------------------------------------------------
+Data types:
+    everything is an object, 
+    including basic data types like integers, floats, booleans, and strings.
+
+    1. Numeric Types (  integer(int) , float (float), complex)
+    2. Sequence Types (  string (str), list (list),tuple (tuple),Range (range))
+    3. Mapping and Set Types(  Dictionary (dict),Set (set),Frozenset (frozenset))
+    4. Other Core Types
+        bool: Truth values (True or False),
+        NoneType: Represents no value (None)
+
+    ordered , un ordered, 
+
+    Mutable: The object's data can be modified, added to, or deleted directly in memory without changing its original memory address (id()).
+    
+    Immutable: The object's data cannot be changed. Any attempt to modify it forces Python to create a brand-new object at a new memory address.
+
+Give Examples on:
+    type(),id()
+
+Collection
+    1. List → “Students attendance list”
+    2. Tuple → “Aadhar Number / Train Seat”
+    3. Set → “Unique Email
+    4. Dictionary → “Student Record”
+
+Immutable Core Types
+    Once created, the value of these objects cannot be changed in memory. 
+    If you modify them, Python creates a completely new object.
+        Integers (int)
+        Floats (float)
+        Booleans (bool)
+        Strings (str)
+        Tuples (tuple)
+
+Mutable Core Types
+    The value of these objects can be changed directly in memory
+    without creating a new object.
+        Lists (list)
+        Dictionaries (dict)
+        Sets (set)
+
+
+1.typecasting
+    the process of converting a variable from one data type to another
+    1. Explicit Type Casting (Manual)
+    2. Implicit Type Casting
+        Python automatically converts one data type to another 
+        without programmer intervention when it is safe to do so
+    Key Considerations
+    Data Loss: Converting from a "higher" type (like a float) to a "lower" type (like an integer) will result in data loss, such as losing decimal precision.
+    1. Non-Numeric Strings to Numbers
+    2. Non-Iterable Types to CollectionsYou cannot cast single, non-iterable values (like integers, floats, or booleans) into sequence types like a list, tuple, or set.
+
+    TypeError means you used the wrong type of object 
+    ValueError means the object type is correct, but its actual value is invalid.
+
+
+
+| Conversion     | Rule                            |
+| -------------- | ------------------------------- |
+| String → Int   | Only digits (0-9), +, -         |
+| String → Float | Digits, +, -, one decimal point |
+| Float → Int    | Decimal part removed            |
+| Int → Float    | `.0` added                      |
+| Int → String   | Always possible                 |
+| Float → String | Always possible                 |
+| String → Bool  | Empty string=False, others=True |
+
+
+int() Rules
+Allowed  : 0-9, +, -
+Not Allow: ., letters, special chars
+
+float() Rules
+Allowed  : 0-9, +, -, .
+Not Allow: letters, special chars
+
+-------------------------------------------------------------------
+operators:
+
+Operators
+1. Arithmetic operator (+,-,*,/,%, //,**)
+2. Assignment Operator (= , +=, -=, *=, /=)
+3. Comparison Operator (==, >=,<= !=,>,<)
+4. logical Operator (and or not)
+5. Bitwise Operator (& | ^ ~) Xor - (1 0 = 1) , ~ 2scompliment ( -(x + 1))
+6. membership Operator (in ,not in)
+7. Identity Operator (is, is not)
+
+
+String:
+1. indexing:
+    s = "Python"
+    print(s[0])   # 'P'
+    print(s[-1])  # 'n'
+    # print(s[10]) -> IndexError
+
+2. Slicing (s[start:end:step])
+    s = "Python"
+    print(s[1:4])   # 'yth' (indices 1, 2, 3)
+    print(s[:3])    # 'Pyt' (shortcut for 0 to 3)
+    print(s[::2])   # 'Pto' (every second character)
+    print(s[::-1])  # 'nohtyP' (reverses string)
+    print(s[50:90]) # '' (no error)
+    print(a[6:0:-2]) #nhy
+
+3. Concatenation (+)=> Type Strictness: You can only concatenate strings with other strings. 
+    s1 = "Py" + "thon" # 'Python'
+    # s2 = "Version " + 3 -> TypeError
+    s2 = "Version " + str(3) # 'Version 3'
+
+4. Repetition (*)
+    print("Hi" * 3)  # 'HiHiHi'
+    print("Hi" * 0)  # ''
+
+
+Method	Description
+upper()	    => Converts to uppercase
+lower()	    => Converts to lowercase
+title()	    => Capitalizes each word
+capitalize()=> Capitalizes first letter
+strip()	    => Removes spaces (left & right)
+lstrip()    => Removes left spaces
+rstrip()    => Removes right spaces
+replace(a,b)=> Replace substring
+split()	    => Split string into list
+join()	    => Join elements with a separator
+find()	    => Returns index of substring
+index()	    => Like find but error if not found
+startswith()=> Check beginning
+endswith()	=> Check ending
+count()	    => Count occurrences
+isalpha()	=> Only alphabets
+isdigit()	=> Only digits
+isalnum()	=> Alphabets + numbers
+islower()	=> All lowercase?
+isupper()	=> All uppercase?
+swapcase()	=> Change lower <-> upper
+format()	=> Insert values
+len(string) => Returns the total number of characters
+
+Split and Join
+--------------
+
+a="apple is my fav fruit"
+print(a.split(' '))
+
+a=["apple","orange","banana"]
+print(' '.join(a))
+
+a=[1,2,3,4]
+print(''.join(map(str,a)))
+
+print(''.join(str(i) for i in a))
+
+
+Collection:
+1. list
+2. Tuple
+3. Set
+4. Dict 
+
+
+3. set
+1. Overlapping Items (Intersection)
+    This extracts only the elements that exist in both sets.
+    1. Using the Intersection Operator (&)
+    2. Using the .intersection() Method
+
+2. Subtracting Sets (Difference)
+    This removes elements of the second set from the first set. Order matters here
+    1. Using the Subtraction Operator (-)
+    2. Using the .difference() Method
+    
+3. Create a New Combined Set
+    These methods leave your original sets (set1 and set2) unchanged.
+    1. Using the Union Operator (|)
+    2. Using the .union() Method
+    
+4. symmetric difference
+    The symmetric difference finds elements that are in either of the sets, but not in both
+    1. Using the Symmetric Difference Operator (^)
+    2. Using the .symmetric_difference() Method
+
+                    Update:
+update = Add everything.
+intersection_update = Keep only duplicates.
+difference_update = Subtract duplicates.
+symmetric_difference_update = Delete duplicates, keep the rest.
+
+
+
+update
+1. .update() (Union In-Place)Adds all elements from the second set into the first set
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+
+set1.update(set2)
+print(set1)  # Output: {1, 2, 3, 4, 5, 6}
+
+2. .intersection_update()Keeps only the elements that exist in both sets.
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+
+set1.intersection_update(set2)
+print(set1)  # Output: {3, 4}
+
+
+3. .difference_update()Removes all elements of the second set from the first set.
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+
+set1.difference_update(set2)
+print(set1)  # Output: {1, 2}
+
+4. .symmetric_difference_update()
+Keeps elements found in either set, but removes the ones they share.
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+
+set1.symmetric_difference_update(set2)
+print(set1)  # Output: {1, 2, 5, 6}
+
+conditional statement
+control the execution flow of a program by running specific blocks of code only when certain conditions are met
+💡 Crucial Rule: IndentationUnlike languages that use curly braces { }, Python relies strictly on whitespace indentation (typically 4 spaces) to define the scope of a code block. Incorrect indentation throws an 
+1. The if Statement
+    score = 85
+    if score >= 50:
+        print("You passed!")
+2. The if-else Statement
+    Provides an alternative block of code that runs if the initial condition evaluates to False
+    age = 16
+    if age >= 18:
+        print("Eligible to vote.")
+    else:
+        print("Too young to vote.")
+
+3. The if-elif-else Chain
+    signal = "Yellow"
+
+    if signal == "Red":
+        print("Stop")
+    elif signal == "Yellow":
+        print("Slow down")
+    else:
+        print("Go")
+
+4. Nested Conditional Statements
+    is_logged_in = True
+    has_permission = False
+
+    if is_logged_in:
+        if has_permission:
+            print("Welcome to the Admin Dashboard.")
+        else:
+            print("Access denied: Permissions missing.")
+    else:
+        print("Please log in first.")
+
+Ternary Operator (Conditional Expression):
+    status = "Adult" if age >= 18 else "Minor"
+
+Loops in Python
+    Repeat a task multiple times
+    for loop:
+
+        Used to iterate over a sequence (like a list, tuple, string, or range). 
+        It executes the code once for each item in that sequence.
+
+        Common Use: Iterating a fixed number of times using the range() function.
+        fruits = ["apple", "banana", "cherry"]
+        for x in fruits:
+            print(x)
+
+        2. The while LoopRepeatedly executes a block of code as long as a specified condition remains True
+        Common Use: When the number of iterations isn't known beforehand.
+
+        i = 1
+        while i < 6:
+            print(i)
+            i += 1 
+
+        3. Loop Control Statements:
+            These statements change the execution from its normal sequence:
+            break: Stops the loop entirely, even if the condition is still true.
+            continue: Skips the current iteration and moves to the next one.
+            pass: Acts as a placeholder when a statement is syntactically required but no action is 
+            needed.
+
+2.iterating with python loops
+    fruits = ["Apple", "Mango", "Orange"]
+
+    for fruit in fruits:
+        print(fruit)
+
+    Real Life:
+        Attendance register la Student by student check panradhu
+
+3. while
+count = 1
+
+while count <= 5:
+    print(count)
+    count += 1
+
+4. name = "Monisha"
+
+for char in name:
+    print(char)
+
+    1.Example 3 - Shopping Cart
+    2.Example 4 - Marks Calculation
+    3.Example 5 - Count Vowels
+    4.Example 6 - Email Validation Characters
+
+5. Range
+range(start, stop, step)
+
+for i in range(5):
+    print(i)
+
+for i in range(1, 6):
+    print(i)
+
+for i in range(1, 11, 2):
+    print(i)
+
+fruits = ["Apple", "Mango"]
+
+for index, fruit in enumerate(fruits):
+    print(index, fruit)
+
+
+Enumerate:
+enumerate() is a built-in function used to keep track of the position (index) of items 
+while looping through an iterable. It automatically couples each item with a counter,
+ returning them as a stream of tuples (index, item).
+ This eliminates the need to manually initialize and increment a counter variable
+
+ Syntax: enumerate(iterable, start=0)
+fruits = ["Apple", "Mango"]
+
+for index, fruit in enumerate(fruits):
+    print(index, fruit)
+
+
+zip
+zip() function is a built-in utility that aggregates elements 
+from two or more iterables (like lists, tuples, or strings) into a single iterator of tuples.
+ It takes the first element from 
+each input, groups them, takes the second element, groups them, and continues down the line
+
+
+
+names = ["Ram", "Sam"]
+marks = [80, 90]
+
+for name, mark in zip(names, marks):
+    print(name, mark)
+
+assert:
+age = 15
+
+assert age >= 18, "Age must be 18 or above"
+
+List comprehension
+numbers = [i for i in range(1, 6)]
+
+print(numbers)
+----------
+squares = [i*i for i in range(1, 6)]
+
+print(squares)
+
+----------
+
+evens = [i for i in range(1,11) if i%2==0]
+
+print(evens)
+
+Dictionary:
+Normal Way:
+
+result = {}
+
+for i in range(1, 6):
+    result[i] = i*i
+
+comprehension:
+result = {i:i*i for i in range(1,6)}
+
+print(result)
+
+#syntax: [expression for item in iterables]
+print([x*x for x in range(1,6) if x%2==0])
+print([i if i%2==1 else "Even" for i in range(11)])
+
+a=["apple","banana"]
+print([i.upper() for i in a])
+
+#Syntax:{ key:value  for item in iterable}
+
+a=['name','role','city']
+b=['apple','ui','chennai']
+
+user_profile={k:v for k,v in zip(a,b)}
+print(user_profile)
+
+-------------------------------------------------------------------------------
+Functions
+    reusable block of code that executes only when it is explicitly called
+    modularize your code, reduce repetition, and make your programs cleaner and easier to maintain
+
+    Creating functions
+    Calling functions
+    No return type without argument
+    No return type with argument
+    Return type without argument
+    Return type with argument
+    Variable-length arguments (*args)
+    Keyword Arguments
+    Variable Keyword length arguments (**kargs)
+    Default parameter function
+    Global and local variables
+    Recursion.
+
+Anonymous Function
+    A lambda function in Python is a small, anonymous function that you can write in a single line
+    It is "anonymous" because it does not require the def keyword or a formal name.
+        Lambda with filter
+        Lambda with map
+        Lambda with reduce
+Generators  
+
+    Creating and using generators
+    1.A generator in Python is a special type of function that returns an iterator object
+
+    2.Instead of computing and returning all values at once (like a regular function with a list), 
+    a generator yields values one at a time, on demand
+
+    3.This makes generators highly memory-efficient when working with large datasets or infinite streams
+Yield:
+    The yield KeywordYou create a generator just like a regular function,
+    but you use the yield keyword instead of return
+
+    return terminates the function completely.yield pauses the function, 
+    saves its state, returns a value, and waits for the next call to resume exactly where it left off
+
+    Exception Handling:
+    ***********************
+    It tries to run a piece of code that has a mistake, 
+    catches the specific error that happens, and prints a helpful message instead of crashing
+    try:
+        a="hi"+5
+    except TypeError:
+        print("Can't Add Number With String")
+    except ValueError:
+        print("Values")
+    
+    
+    Step 1. The try: blockPython attempts to run the code inside this block first
+    a = "hi" + 5
+        The Problem: You are trying to add a string ("hi") and an integer (5).
+        The Result: Python does not allow mixing these types with the + operator.
+        It immediately stops execution and generates a TypeError.
+    step 2:
+        The except TypeError: blockBecause a TypeError occurred, 
+        Python skips the rest of the try block and looks down the list of except blocks for a match.
+
+        except TypeError:
+            print("Can't Add Number With String")
+
+        The Action: Python sees that this block matches the TypeError that just happened.
+        The Output: It executes the print statement and outputs: Can't Add Number With String
+
+    Step 3: The except ValueError: block
+            except ValueError:
+                print("Values")
+
+        The Action: This block is completely ignored.
+        Why? A ValueError only triggers if you pass a correct data type but an inappropriate value 
+        (for example, trying to convert the text "abc" into an integer using int("abc")). 
+        Since a TypeError happened instead, Python skips this entirely
+
+#modules
+    # 1. Built-in Modules (math and random)
+    # 2. User-Defined (Custom) Modules
+    # 3. Third-Party Modules - request,numpy,pandas
+# Exception Handling
+# file Handling
+
+import math
+print(math.sqrt(25))
+print(math.ceil(25.6))
+print(math.ceil(25.1))
+print(math.floor(25.1))
+print(math.floor(25.6))
+
+a=10.6
+print(round(a))
+
+import datetime
+print(datetime.datetime.now())
+cur_date=datetime.datetime.now()
+print(cur_date.year)
+print(type(cur_date))
+
+from calculation import add,mul
+print(add(5,3))
+print(mul(5,3))
+
+import calculation
+print(calculation.add(5,3))
+print(calculation.mul(5,3))
+
+# Exception Handling
+# try
+# except
+# else
+# finally
+
+# except:
+1. Generic Error
+2. Specific Error
+
+
+
+try:
+    a="hi"+5
+except TypeError:
+    print("Can't Add Number With String")
+except ValueError:
+    print("Values")
+
+try:
+    a = "hi" + 5
+    b=int("abc")
+except (ValueError,TypeError) as e:
+    print("Error caught:", e)
+    
+try:
+    a="hi"+5
+except (TypeError,ValueError) as error:
+    print("Can't Add Number With String",error)
+    
+try:
+    a=5/0
+except Exception as error:
+    print("Error",error)
+    
+try:
+    a=5/2
+except Exception as error:
+    print("Error",error)
+else:
+    print("There is no error")
+    
+try:
+    a=5/2
+except Exception as error:
+    print("Error",error)
+else:
+    print("There is no error")
+finally:
+    print("I excecute irrespective of errors")    
+    
+# raise 
+
+def check_age(a):
+    if a<0:
+        raise ValueError("Age must be grater than 0")
+    
+try:
+    check_age(-3)
+except ValueError as e:
+    print("Error",e)
+
+
+# 1. Define your own custom error name
+class InvalidAgeError(Exception):
+    pass
+
+def check_age(a):
+    if a < 0:
+        # 2. Raise your custom error
+        raise InvalidAgeError("Age must be greater than 0")
+    
+try:
+    check_age(-3)
+except InvalidAgeError as e:
+    print("Error:", e)
+
+
+    
+
+
+#File Handling 
+
+# open("url",mode)
+
+# read => r
+# write => w
+# append => a
+
+file=open("tamil.txt",'w')
+file.write("Welcome\n TO Skillfort")
+file.close()
+
+file=open("tamil.txt",'a')
+file.write("\n Happy Learning")
+file.close()
+
+with open("mm.txt","w") as f:
+    f.write("hi")
+    
+with open("tamil.txt",'r')as f:
+    print(f.read())
+
+with open("tamil.txt",'r') as f:
+    print(f.readline())
+    
+with open("tamil.txt",'r') as f:
+    print(f.readlines())
+
+1. Class & Object
+2. Constructor (__init__)
+3. Instance Variables
+4. Instance Method
+5. Types of Methods
+   - Instance Method
+   - Class Method
+   - Static Method
+6. Encapsulation
+7. Inheritance
+8. Polymorphism
+9. Abstraction
+
+# class Classname:
+#     variable
+#     def function_name:
+#         pass
+    
+    
+# ogj= Classname()
+
+
+
+class Student:
+    def __init__(self,name,address):
+        self.name=name
+        self.addr=address
+     
+    @staticmethod   
+    def display_info(self):
+        print(f" Name = {self.name} Address = {self.addr}")
+    
+stud=Student("Azar","Chennai")
+stud.display_info()
+
+
+# 3Types:
+# 1.class - cls
+# 2.Instance - self
+# 3.static - @static
+
+# Encapsulation
+# _name => Protected
+# __password => Private
+
+class Customer:
+    def __init__(self,fname,username,password):
+        self.fname=fname
+        self._username=username  #protected
+        self.__password=password #Private
+        
+    def display_info(self):
+        print(f"Firstname {self.fname} , Username {self._username} password {self.__password}")
+    
+cust=Customer("Tamilzhisai",'tamil',"tamil@123")
+cust.display_info()
+print(cust._username)
+print(cust._Customer__password)
+
+
+# cust._classname__variableName
+
+#Inheritance
+# 1. single Inheritance
+# 2. Multilevel Inheritance
+# 3. Multiple Inheritance  (multiple Parent)
+# 4. Hieriachical Inheritance (Multiple Child, 1 Parent)
+
+class Parent:
+    def display(self):
+        print("I am Parent Class")
+        
+class Child(Parent):
+    def childfunc(self):
+        print("I am Child Class")
+        
+class Gchild(Child):
+    def grandfunc(self):
+        print("I am GrandChild")
+        
+# prt=Parent()   
+# prt.display()
+
+# ch = Child()
+# ch.display()
+# ch.childfunc()
+
+gd=Gchild()
+gd.display()
+gd.childfunc()
+gd.grandfunc()
+
+
+class Parent:
+    def display(self):
+        print("I am Parent Class")
+        
+class Child():
+    def childfunc(self):
+        print("I am Child Class")
+        
+class Gchild(Parent,Child):
+    def grandfunc(self):
+        print("I am GrandChild")
+        
+gd=Gchild()
+gd.grandfunc()
+gd.childfunc()
+gd.display()
+
+ABSTRACT Method
+------------------
+class Calculation:
+    def add(self,a,b,c=None):
+        print(a+b+c)
+        
+calc=Calculation()
+calc.add(1,2,3)
+        
+from abc import ABC,abstractmethod
+class Vehicle(ABC):
+    def __init__(self,name,brand):
+        self.name=name
+        self.brand=brand
+        
+    @abstractmethod
+    def display(self):
+        pass
+    
+class Car(Vehicle):
+    def __init__(self, name, brand):
+        super().__init__(name, brand)
+        
+    def vehicle_info(self):
+        print(self.name,self.brand)
+        
+    def display(self):
+        print("CAR")
+c=Car("MAruthi 800","Maruthi")
+c.display()
+c.vehicle_info()
+
+
+class Vehicle:
+    def __init__(self,brand,color):
+        self.brand=brand
+        self.color=color
+        
+    def display_info(self):
+        print(f" Brand = {self.brand}, Color={self.color}")
+        
+class Car(Vehicle):
+    def __init__(self,brand, color,fuel_type):
+        super().__init__(brand, color)
+        self.fuel_type=fuel_type
+        
+    def display(self):
+        super().display_info()
+        print(f"Fuel Type{self.fuel_type}")
+        
+c=Car("Maruthi","Red","Gas")
+c.display()
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+

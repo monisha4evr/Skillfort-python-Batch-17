@@ -76,4 +76,8 @@ def test(a,**b):
 test(1,b=2,c=3,d=5,f=6)
 
 a= "I like Flowers"
+
 a=['i',"am","Learning","python"]
+print(' '.join(b))
+
+print("ABC"[1]) #B
