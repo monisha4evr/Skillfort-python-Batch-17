@@ -1,69 +1,60 @@
+	Python Overall Test 
+
 Section A – 1 Mark Questions (20 × 1 = 20 Marks)
 1. Which variable name is valid?
 a) 1name
 b) my_name
 c) class
 d) my-name
-
 2. What is the output?
 x = 10
 y = x
 x = 20
 print(y)
-
 3. What is the output?
 print(type(10.5))
-
 4. Which function converts a string into an integer?
 a) str()
 b) int()
 c) float()
 d) bool()
-
 5. What is the output?
 print(10 // 3)
-
 6. What is the output?
 print(2 ** 3)
-
-
 7. Which function call uses only positional arguments?
 a) add(a=10, b=20)
 b) add(10, 20)
 c) add(a=10, 20)
 d) None
-
 8. What is the output?
 def greet(name):
     print("Hello", name)
 greet("Deepak")
-
 9. What is the output?
 text = "Python"
 print(text[2])
-
 10. What is the output?
 print("Hello" * 2)
-
 11. What is the output?
 print(len("Python"))
-
 12. What is the output?
 print("python".upper())
-
 13. Which method converts all letters into lowercase?
 a) lower()
 b) upper()
 c) capitalize()
 d) title()
-
 14. Predict the Output
 a = 5
 b = 2
 print(a % b)
-
 15. print(bool(""))
-16. print(bool("Python"))
+16. Which OOP pillar is demonstrated when a Dog object and a Cat object respond differently to the same makeSound() method call?
+A) Encapsulation
+B) Inheritance
+C) Polymorphism
+D) Abstraction
 17. x = "10" 
     print(int(x) + 5)
 18. print(type(True))
@@ -82,53 +73,35 @@ Section B – 2 Marks (10 × 2 = 20 Marks)
 29. a. What is a generator? Which keyword is used to create a generator?
     b. How to iterate through a generator using loops or the next() function?
 30. What is a module? Write any two built-in modules in Python.
+
 Section C – Programming (6 × 5 = 30 Marks)
-1. OOPS
-
-Create a class Student with:
-
-name
-age
-
-Create a method called display() to print the student's details.
-
+1.State  Pillars of Oops. Explain one Concept with Sample Program
+ 
 2. OOPS
-
 Create a class Calculator with methods:
-
 add()
 subtract()
-
 Create an object and call both methods.
 
-3. Function Types
-
-Write Python programs for the following function types:
-
+3. Function Types - Write Python programs for the following function types:
 Function without arguments and without return value.
 Function with arguments and without return value.
 Function without arguments and with return value.
 Function with arguments and with return value.
+
 4. Collections
-
 Write short notes with one example each for:
+List,Tuple,Set,Dictionary
 
-List
-Tuple
-Set
-Dictionary
 5. Exception Handling
-
     Write a Python program that:
-
     Accepts two numbers from the user.
     Divides the first number by the second.
     Handles division by zero using try-except.
+
 6. Loop + Condition
-
 Write a Python program to:
-
-Accept a number from the user.
-Check whether the number is Even or Odd.
-If the number is even, print all even numbers from 1 to that number.
-If the number is odd, print all odd numbers from 1 to that number.
+    Accept a number from the user.
+    Check whether the number is Even or Odd.
+    If the number is even, print all even numbers from 1 to that number.
+    If the number is odd, print all odd numbers from 1 to that number.
