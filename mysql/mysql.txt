@@ -1,0 +1,25 @@
+Basic Queries (CRUD Operations)
+    CREATE: How to make a new database and table.
+    INSERT: How to add student/employee details into the table.
+    SELECT: How to see the stored data.
+    UPDATE: How to change a phone number or address.
+    DELETE: How to remove a row safely
+
+Filtering Data (The "Search")
+    WHERE clause: Filtering data (e.g., students with marks > 80).
+    Operators: AND, OR, NOT, IN, BETWEEN.
+    LIKE operator: Searching with patterns (e.g., names starting with 'A').
+
+
+Mysql Execution ORDER
+---------------------
+From [Identifies tables involved]
+JOIN [Specified join operation to combine data from multiple table ]
+ON 
+where 
+group by 
+HAVING 
+select 
+Distinct 
+Order by 
+limit & offset
