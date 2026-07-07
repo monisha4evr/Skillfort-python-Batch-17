@@ -27,6 +27,7 @@ alter table stud_details rename to stud_det;
 alter table stud_det rename column active_stautus to active_status;
 -- SYNTAX :  ALTER TABLE table_name ADD COLUMN col_name Data_type constraints AFTER column_name;
 ALTER TABLE stud_det ADD COLUMN mobile_no varchar(20)  AFTER address;
+ALTER TABLE stud_details ADD COLUMN depart varchar(20)  AFTER address;
 ALTER TABLE stud_det ADD COLUMN email_id int  not null AFTER mobile_no;
 -- SYNTAX ALTER TABLE table_name MODIFY COLUMN column_name new_data_type [contraints];
 alter table stud_det modify column mobile_no varchar(30) ;
@@ -58,7 +59,6 @@ select * from stud_det  limit 4,10;
 -- 3. left join 
 -- 4. right join 
 
-
 select s.stud_name,s.course,d.department_name from stud_det as s inner join department as d on s.department = d.id
 where d.department_name="it";
 select s.stud_name,s.course,d.department_name from stud_det as s left join department as d on s.department = d.id;
@@ -73,11 +73,12 @@ select * from stud_det;
 select Course,count(*) as cnt from stud_det where course="python";
 select max(created_at) from stud_det ;
 select min(created_at) from stud_det ;
-describe stud_det;
+-- describe stud_det;
 select sum(active_status) from stud_det; -- count total number -- sum total amount
 
-select stud_name,(select count(*) from department  )
-
-
-
+select stud_name,(select count(*) from stud_det as innr where  o.department =innr.department ) as t from stud_det as o;
+select * from stud_det as s where  exists (select 1 from department as d where s.department=d.id and d.id=1);
+SELECT stud_name, depart FROM stud_details WHERE id < all (SELECT id FROM stud_det WHERE department = 2);
+create view stud_det_view as select * from stud_det;
+select * from stud_det_view;
 
