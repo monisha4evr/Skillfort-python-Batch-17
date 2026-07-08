@@ -82,3 +82,15 @@ SELECT stud_name, depart FROM stud_details WHERE id < all (SELECT id FROM stud_d
 create view stud_det_view as select * from stud_det;
 select * from stud_det_view;
 
+show index from stud_det;
+create index idx_stud_name on stud_det(stud_name);
+drop index idx_stud_name on stud_det;
+alter table stud_details  add constraint fk_stud_depart foreign key (depart) references department(id) on delete cascade;
+select * from students;
+describe students;
+
+
+select * from stud_det;
+describe stud_det;
+insert into stud_det (stud_name,address) values ("Siva","Chennai");
+

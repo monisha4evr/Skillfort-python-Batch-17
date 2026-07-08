@@ -79,5 +79,30 @@ select sum(active_status) from stud_det; -- count total number -- sum total amou
 select stud_name,(select count(*) from department  )
 
 
+delimiter //
+create trigger triggername
+after insert on user
+for each row
+begin
+-- insert into audit_table () values()
+end //
+delimiter;
+
+DELIMITER //
+
+CREATE PROCEDURE GetEmpByDepartment(IN dept_name VARCHAR(50))
+BEGIN
+    SELECT * FROM employees WHERE department = dept_name;
+END //
+
+DELIMITER ;
+
+delimiter//
+create procedure procedure_name(in var)
+begin
+    select * from stud_det where varrr=var;
+end//
+delimiter;
+
 
 
