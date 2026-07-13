@@ -118,3 +118,8 @@ Operator:
 
 console.log(5+4+"3")
 console.log("3"+5+4)
+
+console.log(null == undefined)
+console.log(null === undefined)
+
+console.log([]==[])
