@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="">
+        <input type="text" name="username" value="" id="username">
+        <input type="text" name="firstname" value="" id="firstname">
+        <span id="unamespan"></span>
+        <button onclick="test(e)">Submit</button>
+    </form>
+    <script>
+        // let uname= document.getElementById('username').value;
+        // let fname=document.getElementById('firstname').name
+        // console.log(uname,fname) 
+        function test(e){
+            e.preventdefault()
+            let uname= document.getElementById('username').value;
+            let fname=document.getElementById('firstname').value;
+            document.getElementById("unamespan")=document.getElementById('username').value;
+        }
+    </script>
+
+</body>
+</html>

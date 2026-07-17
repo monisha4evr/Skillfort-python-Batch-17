@@ -96,5 +96,32 @@ a=[1,2,3,4]
 console.log(typeof(a))
 console.log(a.map((i)=>{return i*2}))
 console.log(a.filter((i)=>{return i%2==0 }))
-console.log(a.reduce((a,c)=>{return a+c }))
+console.log(a.reduce((a,c)=>{return a+c })) 
+
+
+// Closure: 
+// --------
+function outer(){
+    let i=0
+    function inner(){
+        return(i++)
+    }
+    return inner;
+}
+const clsr=outer();
+clsr()
+console.log(clsr())
+clsr()
+console.log(clsr())
+
+
+function test(){
+    let a=0
+    console.log(a)
+    a++
+    console.log(a)
+}
+
+test()
+test()
 
