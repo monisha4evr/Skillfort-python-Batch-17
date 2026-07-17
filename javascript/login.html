@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login </title>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <div>
+            <form action="">
+                <div>
+                    <label for="">Username</label>
+                    <input type="text" name="uname" id="uname">
+                </div>
+                <div>
+                    <label for="">Password</label>
+                    <input type="password" name="pwd" id="pwd">
+                </div>
+                <button type="button" onclick="validate()">Log in</button>
+            </form>
+        </div>
+    </div>
+
+    Task 2: Display Error in Span instead of console
+    Task 3,4: class, TagName Oru  Simple Example
+    <script>
+        let username=document.getElementById('uname')
+        let password=document.getElementById('pwd')
+        function validate(){
+            let u_name=username.value
+            let p_word=password.value
+            if(u_name=="admin" && p_word=="123"){
+                console.log("Successfully Loggedin")
+            }
+            else{
+                console.log("Invalid Credential")
+            }
+        }
+    </script>
+</body>
+</html>

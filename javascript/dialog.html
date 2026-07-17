@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog Box</title>
+</head>
+<body>
+    <ol>
+        <li>alert </li>
+        <li>prompt</li>
+        <li>confirm </li>
+    </ol>
+    <div>
+
+        A Value : <span id="a_value"></span><br>
+        B Value : <span id="b_value"></span><br>
+        C Value : <span id="c_value"></span>
+    </div>
+
+    <ol>
+        <li>innerHTML</li>
+        <li>innerText</li>
+        <li>textContent</li>
+    </ol>
+
+    Task: Addition , Subtraction,Multiplication,Divition
+
+<script>
+   // alert('Hi Welcome to Javascript')
+   // let uname=prompt("Enter your name")
+   // console.log(uname)
+   //confirm("Are you sure to Delete this?")
+
+   let a= prompt("Enter a Value")
+   let b= prompt("Enter b Value")
+   console.log(a+b)
+   c=Number(a)+Number(b)
+   console.log("After Type Casting"+c)
+   console.log(typeof(a))
+   let a_val=document.getElementById('a_value') 
+   let b_val=document.getElementById('b_value') 
+   let c_val=document.getElementById('c_value') 
+   console.log(a_val)
+    a_val.innerHTML=a
+    b_val.innerHTML=b
+    c_val.innerHTML=c
+
+</script>
+
+</body>
+</html>
