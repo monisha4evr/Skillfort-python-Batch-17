@@ -110,11 +110,11 @@ print(a)
 
 b={1,2,3}
 c={1,4,5}
-print(b.union(c))  # |
+print(b.union(c))  # |  {1, 2, 3, 4, 5}
 print(b|c)
-print(b.intersection(c)) # &
-print(b.difference(c)) # -
-print(b.symmetric_difference(c)) # ^
+print(b.intersection(c)) # &  {1}
+print(b.difference(c)) # - {2, 3}
+print(b.symmetric_difference(c)) # ^ {2, 3, 4, 5}
 
 #dict
 a={"name":"apple"}

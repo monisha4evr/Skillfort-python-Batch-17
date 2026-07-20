@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class List</title>
+    <style>
+        .red{
+           color: red;
+        }
+        .blue{
+            color:blue;
+        
+        }
+        .green{
+            color:green;
+        }
+        .demo{
+            background-color: bisque;
+        }
+        .bold{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <ol>Class List
+        <li>add</li>
+        <li>remove</li>
+        <li>toggle</li>
+    </ol>
+    <p class="demo" id="test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod, nisi nobis, culpa ex ipsa eos obcaecati aut tempora nesciunt adipisci modi. Reprehenderit temporibus placeat pariatur dignissimos. Neque, laborum nostrum!</p>
+    <script>
+
+        t=document.getElementById('test')
+        t.classList.add('green')
+        t.classList.remove('demo')
+        t.classList.toggle('bold')
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector</title>
+    <style>
+    .red{
+        color:red;
+    }
+    </style>
+</head>
+<body>
+    <b>Bold Tag</b>
+    <b>Example 1</b>
+    <b>Example 2</b>
+    <div id="test">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti beatae quisquam provident animi eum magni laboriosam quo nulla quos eos quia, fugit autem accusantium! Similique voluptatem est alias odit rem!</p>
+    </div>
+
+    <div class="red">
+        <h1>Div 1</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quisquam, corrupti, minus itaque voluptate dicta laborum perspiciatis odio officia eveniet sapiente consectetur labore. Possimus id eius odit delectus alias voluptatum.</p>
+    </div>
+    <div class="red">
+        <h1>Div 2</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque doloribus, magni totam harum amet expedita fugiat laudantium nihil eveniet consectetur ullam porro nulla recusandae dignissimos aperiam vel ducimus! Tempore, assumenda.</p>
+    </div>
+    <div class="red">
+        <h1>Div 3</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed laborum aspernatur eum voluptas recusandae facere distinctio ducimus libero. Assumenda sint reprehenderit quo dolore adipisci? Illo itaque minus magnam nemo repellendus.</p>
+    </div>
+    <ol>Selector
+        <li>getElementById</li>
+        <li>getElementsByClassName</li>
+        <li>getElementsByTagName</li>
+        <li>querySelector</li>
+        <li>querySelectorAll</li>
+    </ol>
+
+    htmlCollection => Live , Element only , cant use foreach
+
+    note list=> not live, Element and content, can use foreach
+    <script>
+        console.log(document.getElementById('test'))
+        console.log(document.getElementsByClassName('red'))
+        console.log(document.getElementsByTagName('b'))
+        console.log(document.querySelector('b'))
+        console.log(document.querySelectorAll('b'))
+
+        const b=document.querySelectorAll('b')
+        b.forEach((i)=>console.log(i))
+
+        const a=document.getElementsByClassName('red')
+        a.forEach((i)=>{console.log(i)})
+    </script>
+</body>
+</html>

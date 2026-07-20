@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event handler</title>
+</head>
+<body>
+    
+    <form action="">
+        <button onclick="alert('Welcome to Javascript')">Click</button>
+        <button onclick="test()">Click here</button>
+        <input type="text" onkeypress="test()">
+        <input type="text" onfocus="samp()" onblur="samp1()">
+
+    </form>
+    <script>
+        function test(){
+            alert("I am Test Function")
+        }
+
+        function samp(){
+            console.log("on focus")
+        }
+        function samp1(){
+            console.log("On blur")
+        }
+    </script>
+</body>
+</html>

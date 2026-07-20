@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element- Dom manipulation</title>
+</head>
+<body>
+    <ol>
+        <li>createElement</li>
+        <li>appendChild</li>
+        <li>replaceChild</li> 2 parameters replaceChild(new,old)
+        <li>removeChild</li> parent, child
+    </ol>
+
+    <ol id="samp"> Flowers
+        <li id="r">Rose</li>
+        <li id="l">Lotus</li>
+        <li id="j">Jasmine</li>
+        
+    </ol>
+</body>
+<script>
+    ridsamp=document.getElementById('samp')
+    li=document.createElement('li')
+    li.textContent="Hibiscus"
+    samp.appendChild(li)
+    document.body.style.backgroundColor="green";
+</script>
+</html>
