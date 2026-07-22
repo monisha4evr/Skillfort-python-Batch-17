@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubbling</title>
+</head>
+<body>
+    <div style="height:400px;width:400px;background-color:blueviolet;" id="gparent">
+        <div style="height:300px;width:300px;background-color:aquamarine;" id="parent">
+            <div style="height:200px;width:200px;background-color:bisque;" id="child">
+                Hi From Skillfort
+            </div>
+        </div>
+    </div>
+
+    local Storage
+
+
+<script>
+    document.getElementById('gparent').addEventListener('click',()=>{
+        console.log("Grand Panrent Clicked")
+    })
+    
+    document.getElementById('parent').addEventListener('click',()=>{
+        console.log("Panrent Clicked")
+    })
+    
+    document.getElementById('child').addEventListener('click',(e)=>{
+        e.stopPropagation()
+        console.log("Child Clicked")
+    })
+
+  localStorage.setItem("name","Sanjeev")
+  console.log(localStorage.getItem('name'))
+
+</script>
+</body>
+</html>

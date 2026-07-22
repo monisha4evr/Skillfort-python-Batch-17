@@ -21,10 +21,15 @@
     </ol>
 </body>
 <script>
-    ridsamp=document.getElementById('samp')
+    samp=document.getElementById('samp')
     li=document.createElement('li')
     li.textContent="Hibiscus"
     samp.appendChild(li)
     document.body.style.backgroundColor="green";
+
+    rep=document.getElementById("l")
+    li_new=document.createElement('li')
+    li_new.textContent="MarieGold"
+    samp.replaceChild(li_new,rep)
 </script>
 </html>

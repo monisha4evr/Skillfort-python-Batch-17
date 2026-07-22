@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listener</title>
+</head>
+<body>
+
+    <input type="text" name="username" id="username">
+    <p id="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, ratione harum! Nostrum quibusdam dolorem itaque sed sint ipsa debitis at provident, cum eos quos labore quasi nemo mollitia reprehenderit earum?</p>
+    <script>
+        usrname=document.getElementById('username')
+        usrname.addEventListener('blur',()=>{
+            usrname.style.backgroundColor="blue";
+        })
+        usrname.addEventListener('focus',()=>{
+            usrname.style.backgroundColor="green";
+        })
+        username.addEventListener('keypress',()=>{
+            username.style.color="red";
+        })
+
+        para=document.querySelector('#para')
+        para.addEventListener('mouseover',()=>{
+            para.style.color="Yellow";
+            para.style.border="5px dotted purple"
+        })
+    </script>
+    
+</body>
+</html>
