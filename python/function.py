@@ -195,9 +195,9 @@ task 5: sum of List Element
 
 # lambda function:
 # -----------------
-#Singleline Expression
+# Singleline Expression
 # Anonymous Function
-#Syntax: lambda p1,p2 : expression 
+# Syntax: lambda p1,p2 : expression 
 
 sample = lambda a,b,c : a+b+c
 print(sample(10,20,30))
@@ -230,6 +230,14 @@ print(next(f))
 print(next(f))
 print(next(f))
 
+my_list=['pytohn','java','react']
+a=iter(my_list)
+
+while True:
+    try:
+        print(next(a))
+    except StopIteration:
+        break
 
 
 

@@ -1,0 +1,69 @@
+To create Project:
+******************
+python -m venv env_folder_name 
+env_folder_name\Scripts\activate 
+pip install django
+django-admin startproject projectname 
+cd projectname 
+python manage.py startapp appname 
+python manage.py runserver 
+
+
+Ctlr+c to cut server
+
+After Creation 
+env_folder_name\Scripts\activate
+cd projectname
+python manage.py runserver
+
+
+Database:
+python mange.py makemigrations
+python manage.py migrate
+
+python manage.py runserver
+
+
+to create admin user 
+
+python manage.py createsuperuser
+username:admin
+email 
+mobile 
+password  admin123
+conf-password admin123
+y/n => y
+
+
+To connect external database:
+
+Step 1: 
+create Database in mysql
+
+Step 2: 
+project -> settings.py 
+Database 
+'default': {
+                'ENGINE': 'django.db.backends.mysql',
+                'NAME': 'lighthouse',
+                'USER':'root',
+                'PASSWORD':'moni@123',
+                'PORT':3306,
+                'HOST':'localhost'
+            }
+
+Step 3: 
+ctrl+c 
+pip install mysqlclient
+
+Step 4:
+python manage.py runserver 
+
+step 5:
+ctrl+c 
+python manage.py makemigrations
+python manage.py migrate
+
+Create Useruser again
+
+
