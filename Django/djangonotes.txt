@@ -17,7 +17,7 @@ cd projectname
 python manage.py runserver
 
 
-Database:
+Database: (Local Database)
 python mange.py makemigrations
 python manage.py migrate
 
@@ -34,6 +34,7 @@ password  admin123
 conf-password admin123
 y/n => y
 
+************************************************************************
 
 To connect external database:
 
@@ -65,5 +66,9 @@ python manage.py makemigrations
 python manage.py migrate
 
 Create Useruser again
+
+********************************************
+To create more than one app 
+python mana
 
 
