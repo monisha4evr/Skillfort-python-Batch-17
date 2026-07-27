@@ -89,6 +89,11 @@ alter table stud_details  add constraint fk_stud_depart foreign key (depart) ref
 select * from students;
 describe students;
 
+create database lighthouse;
+use lighthouse;
+show tables;
+select * from auth_user;
+
 
 select * from stud_det;
 describe stud_det;
