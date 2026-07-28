@@ -92,7 +92,7 @@ describe students;
 create database lighthouse;
 use lighthouse;
 show tables;
-select * from auth_user;
+select * from app_product;
 
 
 select * from stud_det;

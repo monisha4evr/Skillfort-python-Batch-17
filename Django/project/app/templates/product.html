@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <div>
+            <label for="">Product Name</label>
+            <input type="text" name="product_name" id="product_name">
+        </div>
+        <br>
+        <div>
+            <label for="">Price</label>
+            <input type="number" name="price" id="price">
+        </div>
+        <br>
+        <div>
+            <label for="">Description</label>
+            <input type="text" name="description" id="description">
+        </div>
+        <br>
+        <div>
+            <label for="">Rating</label>
+            <input type="number" name="rating" id="rating">
+        </div>
+        <br>
+        <button type="submit">Save</button>
+    </form>
+
+
+    {% if product %}
+    {%for i in product %}
+        {{i.product_name}}
+        {{i.price}}
+        {{i.description}}
+    {%endfor%}
+    {%endif%}
+</body>
+</html>
