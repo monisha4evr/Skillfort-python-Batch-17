@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect,get_object_or_404
 from django.http import HttpResponse
 from datetime import date
 from .models import Product
@@ -35,3 +35,24 @@ def addproduct(request):
         print(prd)
     prd_details=Product.objects.all()
     return render(request,"product.html",{"product":prd_details})
+
+def updateproduct(request,id):
+    pt=Product.objects.get(id=id)
+    if request.method == "POST":
+        pt.product_name=request.POST.get('product_name')
+        pt.price=request.POST.get('price')
+        pt.description=request.POST.get('description')
+        pt.rating=request.POST.get('rating')
+        pt.save()
+        return redirect("product")
+    return render(request,"update.html")
+
+def deleteProduct(request,id):
+    pt=Product.objects.get(id=id)
+    pt.delete()    
+    return redirect("product")
+
+def deleteProductTest(request,id=id):
+    pt=get_object_or_404(Product,id=id)
+    pt.delete()
+    return redirect("product")
