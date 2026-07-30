@@ -93,6 +93,7 @@ create database lighthouse;
 use lighthouse;
 show tables;
 select * from app_product;
+select * from auth_user;
 
 
 select * from stud_det;

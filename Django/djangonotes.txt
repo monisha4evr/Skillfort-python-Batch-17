@@ -69,6 +69,6 @@ Create Useruser again
 
 ********************************************
 To create more than one app 
-python mana
+python manage.py startapp appname 
 
 

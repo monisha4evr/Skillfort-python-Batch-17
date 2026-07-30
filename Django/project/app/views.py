@@ -3,6 +3,8 @@ from django.http import HttpResponse
 from datetime import date
 from .models import Product
 
+
+
 # Create your views here.
 def home(request):
     return render(request,"home.html")
@@ -56,3 +58,45 @@ def deleteProductTest(request,id=id):
     pt=get_object_or_404(Product,id=id)
     pt.delete()
     return redirect("product")
+
+from django.contrib.auth.models import User
+def userSignup(request):
+    if request.method =="POST":
+        uname=request.POST.get('username')
+        email=request.POST.get('email')
+        password=request.POST.get('password')
+        confirm_password=request.POST.get('confirm_password')
+
+        if password != confirm_password:
+            print("Password Mismatch")
+            return redirect('userSignup')
+
+        usr=User.objects.create_user(
+            username=uname,
+            email=email,
+            password=password
+        )
+        print(usr,"User Created Successfully")
+    return render (request,"signup.html")
+
+from django.contrib.auth import authenticate,login
+def usersignin(request):
+    if request.method=="POST":
+        username=request.POST['username']
+        password=request.POST['password']
+
+        user=authenticate(
+            username=username,
+            password=password
+        )
+        if user:
+            login(request,user)
+            return redirect('home')
+        else:
+            print("Invalid Credentials")
+    return render (request,"signin.html")
+
+from django.contrib.auth import logout
+def userlogout(request):
+    logout(request);
+    return redirect('userSigin')
