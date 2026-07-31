@@ -27,6 +27,7 @@ urlpatterns = [
     # path('contact/',views.contact),
     # path('about/',views.about),
 ]
+
 if settings.DEBUG:
     urlpatterns +=static(
         settings.MEDIA_URL,

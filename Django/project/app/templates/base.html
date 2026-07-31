@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My project</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <center>My Project</center>
+
+    </header>
+    <nav><a href=""> Login</a> <a href=""> Logout</a></nav>
+    {%block content%}
+    {%endblock%}
+    <footer>
+        monisha@Corporate
+    </footer>
+</body>
+</html>

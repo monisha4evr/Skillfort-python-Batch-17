@@ -1,0 +1,41 @@
+{% extends 'base.html'%}
+{% load static%}
+
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Form</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <table>
+    <form action="" method="post">
+        {% csrf_token %}
+        <!-- {{ProductForm.as_table}} -->
+     {{ProductForm.as_p}} 
+        <button type="submit">Save</button>
+    </form>
+    </table>
+
+    <table>
+        <tr>
+            <th>Product Name</th>
+            <th>Price</th>
+        </tr>
+        {%if prdt%}
+            {%for i in prdt%}
+            <tr>
+               <td>{{i.product_name}}</td> 
+                <td>{{i.price}}</td> 
+                </tr>
+            {%endfor%}
+        {%endif%}
+    </table>
+    
+
+</body>
+</html>
+{%endblock%}

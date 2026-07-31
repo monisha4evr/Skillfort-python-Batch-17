@@ -100,3 +100,18 @@ from django.contrib.auth import logout
 def userlogout(request):
     logout(request);
     return redirect('userSigin')
+
+from .forms import ProductForm
+def productform(request):
+    if request.method=="POST":
+        print("Product from Form")
+        prdtform=ProductForm(request.POST)
+        if prdtform.is_valid():
+            prdtform.save()
+            print("Success")
+            return redirect("productform")
+        else:
+            print("Success")
+            prdtform=ProductForm()
+    prdt=Product.objects.all()
+    return render(request,"form/prodtform.html",{"ProductForm":ProductForm,"prdt":prdt})
