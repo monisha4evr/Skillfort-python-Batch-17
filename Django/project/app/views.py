@@ -115,3 +115,14 @@ def productform(request):
             prdtform=ProductForm()
     prdt=Product.objects.all()
     return render(request,"form/prodtform.html",{"ProductForm":ProductForm,"prdt":prdt})
+
+from django.views.generic import TemplateView
+class ProductList(TemplateView):
+    template_name="class/tempview.html"
+    
+    def get_context_data(self, **kwargs):
+        context=super().get_context_data(**kwargs)
+        context['name']="orange"
+        context['color']="RedishOrange"
+        context['price']="210.2"
+        return context

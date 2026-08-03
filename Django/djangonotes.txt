@@ -72,3 +72,28 @@ To create more than one app
 python manage.py startapp appname 
 
 
+Generic Views
+-------------
+Generic View:
+
+Generic Views are Django's built-in views. They reduce the amount of code we write.
+
+Generic Views
+      │
+      ├── Display Generic Views
+      │      │
+      │      ├── TemplateView (Display a static HTML page)
+      │      ├── ListView (Display multiple records from a model)
+      │      └── DetailView (Display a single record based on its ID or slug)
+      │
+      └── Editing Generic Views
+             │
+             ├── FormView (Handle a normal Django form (not necessarily tied to a model))
+             ├── CreateView (Insert/Create a new record)
+             ├── UpdateView (Update an existing record)
+             └── DeleteView (Delete a record)
+
+from django.views.generic import TemplateView,ListView,DetailView
+
+
+
