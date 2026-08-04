@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from datetime import date
 from .models import Product
 
+from django.urls import reverse_lazy
 
 
 # Create your views here.
@@ -116,7 +117,7 @@ def productform(request):
     prdt=Product.objects.all()
     return render(request,"form/prodtform.html",{"ProductForm":ProductForm,"prdt":prdt})
 
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView,ListView,DetailView
 class ProductList(TemplateView):
     template_name="class/tempview.html"
     
@@ -126,3 +127,30 @@ class ProductList(TemplateView):
         context['color']="RedishOrange"
         context['price']="210.2"
         return context
+
+class ProductsList(ListView):
+    model=Product
+    template_name="class/productlist.html"
+    context_object_name='product'
+
+    # def get_queryset(self):
+    #     return Product.objects.filter(rating)
+
+class ProductDetailList(DetailView):
+    model=Product
+    template_name="class/productdetaillist.html"
+    context_object_name='product'
+
+from django.views.generic.edit  import CreateView,UpdateView,DeleteView
+
+class ProductCreate(CreateView):
+    model=Product
+    template_name="class/createproduct.html"
+    fields=['product_name','price','description','rating']
+    success_url=reverse_lazy('product_list')
+
+class ProductUpdate(UpdateView):
+    model=Product
+    template_name="class/updateproduct.html"
+    fields=['product_name','price','description','rating']
+    success_url=reverse_lazy('product_list')
