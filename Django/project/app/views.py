@@ -60,6 +60,16 @@ def deleteProductTest(request,id=id):
     pt.delete()
     return redirect("product")
 
+
+def productfilter(request):
+    if request.method == "POST":
+        searchtext=request.POST['search']
+        prd=Product.objects.filter(product_name__icontains=searchtext)
+        return render(request,"filter.html",{"product":prd})
+    prd=Product.objects.all()
+    return render(request,"filter.html",{"product":prd})
+
+
 from django.contrib.auth.models import User
 def userSignup(request):
     if request.method =="POST":
@@ -154,3 +164,47 @@ class ProductUpdate(UpdateView):
     template_name="class/updateproduct.html"
     fields=['product_name','price','description','rating']
     success_url=reverse_lazy('product_list')
+
+
+class ProductDelete(DeleteView):
+    model = Product
+    template_name = "class/deleteproduct.html"
+    success_url = reverse_lazy("product_list")
+
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from .serializers import ProductSerializer
+class ProductApiView(APIView):
+    def get(self,request):
+        prd=Product.objects.all()
+        serializer=ProductSerializer(prd,many=True)
+        return Response(serializer.data)
+    
+    def post(self,request):
+       
+        serializer=ProductSerializer(data=request.data )
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        
+    def put(self,request,pk):
+        # prd=Product.objects.get(id=pk) 
+        prd=get_object_or_404(Product,id=pk)
+        serializer=ProductSerializer(prd,data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+    
+    def patch(self,request,pk):
+        # prd=Product.objects.get(id=pk) 
+        prd=get_object_or_404(Product,id=pk)
+        serializer=ProductSerializer(prd,data=request.data,partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        
+    def delete(self,request,pk):
+        prd=get_object_or_404(Product,id=pk)
+        # prd=Product.objects.get(id=pk) 
+        prd.delete()
+        return Response({"message":"Product Deleted Successfully"})

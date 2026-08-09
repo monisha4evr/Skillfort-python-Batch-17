@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products List</title>
+    <title>Product list</title>
 </head>
 <body>
+    <form action="" method="post">
+        {%csrf_token%}
+        <input type="text" name="search" id="search">
+        <button>Search</button>
+    </form>
     <table>
         <tr>
             <th>Product Name</th>
@@ -15,18 +20,24 @@
             <th>Action</th>
         </tr>
    
+    {%if product %}
     {% for i in product %}
     <tr>
-       <td> {{i.product_name}}</td>
-       <td>{{i.price}}</td>
+        <td> {{i.product_name}}</td>
+        <td>{{i.price}}</td>
         <td>{{i.description}}</td>
         <td>{{i.rating}}</td>
         <td><a href="{% url 'product_details' i.id %} ">View</a></td>
-       <td> <a href="{% url 'product_update' i.id %}">Edit</a></td>
-       <td> <a href="{% url 'product_delete' i.id %}">Delete</a></td>
+        <td> <a href="{% url 'product_update' i.id %}">Edit</a></td>
+        <td> <a href="{% url 'product_delete' i.id %}">Delete</a></td>
 
     </tr>
     {%endfor%}
+
      </table>
+
+    {%else%}
+        <p>No data Found</p>
+    {%endif%}
 </body>
 </html>

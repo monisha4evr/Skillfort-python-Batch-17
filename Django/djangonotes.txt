@@ -96,4 +96,46 @@ Generic Views
 from django.views.generic import TemplateView,ListView,DetailView
 
 
+Filter:
+------
+# Ignore case
+StudentDetails.objects.filter(course__iexact="python")
 
+# Contains
+StudentDetails.objects.filter(course__contains="Py")
+
+# Ignore case + Contains
+StudentDetails.objects.filter(course__icontains="py")
+
+# Starts with
+StudentDetails.objects.filter(course__startswith="P")
+
+# Ends with
+StudentDetails.objects.filter(course__endswith="on")
+
+# Greater than
+StudentDetails.objects.filter(fees_paid__gt=5000)
+
+# Less than
+StudentDetails.objects.filter(fees_paid__lt=5000)
+
+# Greater than or equal
+StudentDetails.objects.filter(fees_paid__gte=5000)
+
+# Less than or equal
+StudentDetails.objects.filter(fees_paid__lte=5000)
+
+
+
+Step 1:
+    pip install djangorestframework
+    
+
+Step 2:
+
+settings.py:
+INSTALLED_APPS = [
+    ...
+    'rest_framework',
+]
+Note: pip freeze > requirements.txt

@@ -1,0 +1,134 @@
+React
+    React is an open-source JavaScript library used to build fast, interactive, and reusable user interfaces. 
+    It was developed by Meta (Facebook).
+
+Installation:
+Check:
+    node -v
+    npm -v
+
+Create Project:
+npm create vite@latest react-demo
+create at vite=> Y
+choose react 
+choose JavaScript
+Linter : ESLint
+Yes 
+
+to Open Later on :
+cd project 
+npm run dev 
+------------------------------
+
+
+2. Important React Concepts
+Components
+JSX ( javascript - we can write HTML ) 
+Props
+State
+Events
+Hooks
+
+
+Folder Structure
+
+myapp/
+│
+├── node_modules/
+│
+├── public/
+│
+├── src/
+│   ├── assets/
+│   ├── App.jsx
+│   ├── App.css
+│   ├── main.jsx
+│   └── index.css
+│
+├── .gitignore
+├── index.html
+├── package.json
+├── package-lock.json
+└── vite.config.js
+
+Project Folder Structure
+
+src/
+│
+├── assets/
+│
+├── components/
+│   ├── Navbar.jsx
+│   ├── Footer.jsx
+│   └── Button.jsx
+│
+├── pages/
+│   ├── Home.jsx
+│   ├── Login.jsx
+│   └── About.jsx
+│
+├── services/
+│   └── api.js
+│
+├── hooks/
+│   └── useAuth.js
+│
+├── context/
+│   └── AuthContext.jsx
+│
+├── App.jsx
+├── App.css
+├── index.css
+└── main.jsx
+
+
+components → reusable UI
+
+pages      → full pages
+
+services   → API/backend communication
+
+hooks      → reusable React logic
+
+context    → shared/global data
+
+assets     → images/icons/fonts
+
+App.jsx    → main application component
+
+main.jsx   → React application entry point
+
+
+After git clone:
+npm install (It install all the dependencies needed to this project from package-lock.json)
+
+
+dom -> Document Object Model (tree like Structure) 
+Virtual DOM -> 
+
+
+components : 
+
+-> reusable
+-> Independent block of Code 
+
+Types: 
+1. functional components
+2. Class Components 
+
+
+Life Cycle:
+    mount 
+    updatemount
+    unmount
+
+rules: 
+1. Starting with Capital letter
+2. it returns only one Element 
+3. Attributes must be in Camel Case 
+4. export 
+
+<p class="para">Paragraph</p>
+<p className="para">Paragraph</p>
+
+<label htmlfor=""></label>

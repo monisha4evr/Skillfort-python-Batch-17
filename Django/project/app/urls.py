@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path
 from . import views
 from django.views.generic import TemplateView
-from .views import ProductList,ProductsList,ProductDetailList,ProductCreate,ProductUpdate
+from .views import ProductList,ProductsList,ProductDetailList,ProductCreate,ProductUpdate,ProductDelete,ProductApiView
 
 urlpatterns = [
     path('home/',views.home,name="home"),
@@ -16,11 +16,14 @@ urlpatterns = [
     path('user/signin/',views.usersignin,name="userSigin"),
     path('user/logout/',views.userlogout,name="userlogout"),
     path('productform/',views.productform,name="productform"),
+    path('product/filter/',views.productfilter,name="productfilter"),
     path('template-home/',TemplateView.as_view(template_name="temptview.html",extra_context={"name":"Apple","color":"red"}),name="template_home"),
     path('template-examp/', ProductList.as_view(), name="template_example"),
     path('product/list/', ProductsList.as_view(), name="product_list"),
     path('product/detail/list/<int:pk>/', ProductDetailList.as_view(), name="product_details"),
     path('product/detail/create/', ProductCreate.as_view(), name="product_create"),
     path('product/detail/update/<int:pk>/', ProductUpdate.as_view(), name="product_update"),
-       
+    path("product/detail/delete/<int:pk>/",ProductDelete.as_view(),name="product_delete"),
+    path('productapi/addproduct/',ProductApiView.as_view(),name="addproduct"),
+    path('productapi/addproduct/<int:pk>/',ProductApiView.as_view(),name="addproduct"),
 ]
