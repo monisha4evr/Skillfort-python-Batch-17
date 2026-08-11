@@ -132,3 +132,10 @@ rules:
 <p className="para">Paragraph</p>
 
 <label htmlfor=""></label>
+
+
+dependency:
+3 Types
+1. Load Everytime - dont specify []
+2. Load only once - specify []
+3. load based on State/variable 
